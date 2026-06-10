@@ -1,0 +1,43 @@
+﻿Nome do projeto,Anexar arquivo,Data de início,Data de término,Equipe,Prioridade,Progresso,Responsável,Resumo por IA,Status,Valor final,Valor inicial
+Design - Documentar no Notion,,15/04/2026,15/04/2026,,,0%,,"O projeto de design foi concluído em 15/04/2026, incluindo a documentação da identidade visual com paleta de cores e tipografia no Notion, além de um link do Figma.",Concluído,,
+Planejamento Design System,,24/03/2025,28/03/2025,Comercial,Média,0%,,"O planejamento do Design System envolve a definição de cores, layout geral, formato dos botões, tipografia e iconografia. As ações incluem definir a paleta de cores, logo, interações e tipografia. O projeto está concluído e a equipe é da área comercial.",Concluído,100,0
+Organização Geral do Notion,,20/01/2025,04/02/2025,Recursos humanos,Baixa,100%,,"Projeto de Organização Geral do Notion com início em 20/01/2025 e término em 04/02/2025, status concluído, priorizando metas e contexto, mas com itens de ação não especificados e documentos não vinculados.",Concluído,100,100
+Definição de arquitetura geral da aplicação,,10/04/2026,10/04/2026,Financeiro,Alta,100%,,"O projeto de definição da arquitetura geral da aplicação foi concluído em 04/10/2026, com prioridade alta e valor inicial e final de 100. A checklist inclui a definição das telas necessárias, componentes, ações e fluxo entre as telas.",Concluído,100,100
+Prototipo,,15/04/2026,15/04/2026,,,0%,,"O projeto envolve a definição de telas e layouts para desenvolvimento, com foco na identidade visual da equipe. As ações incluem criar layouts e funções para Produtos, Clientes e Fornecedores, Funcionários, Pedidos, Financeiro, Estoque e Login.",Concluído,,
+Setup Geral e Github,,10/04/2026,10/04/2026,,Alta,0%,,"Criar as fundações da API e garantir a conexão com o SQL, seguindo um fluxo de ações que inclui a criação do projeto no Visual Studio, compartilhamento do repositório, clonagem por integrantes, criação de branches pessoais, divisão de tarefas e testes com migração e atualização do banco de dados.",Concluído,,
+Design - CSS Botões,,,,,,0%,,"O projeto visa criar um index.html e um style.css apenas com botões e links, seguindo as cores e comportamentos prototipados no Figma. É necessário documentar as classes utilizadas, seja com biblioteca de estilo ou manualmente. As ações incluem criar o modelo e registrar decisões no Notion.",Concluído,,
+Configurar a Connection String,,,,,,0%,,"O projeto está na fase de configuração da Connection String e DbContext, e em caso de erros, é necessário validar o material de apoio.",Concluído,,
+Layout Padrão,,,,,,100%,,"O projeto ainda não foi iniciado e inclui uma visão geral das metas e contexto, além de uma lista de itens de ação e documentos relacionados.",Concluído,100,100
+Criar as classes dos modelos definidos,,,,,,0%,,"Organizar as classes do projeto em duas duplas: Dupla A deve criar classes para Produto, Contas, Clientes/Fornecedores e Folha de Pagamento; Dupla B deve focar em Funcionários, Pedidos, Item Pedido e controle de estoque. Também é necessário implementar um sistema de autenticação para usuários.",Concluído,,
+Configurar DbContext e Migrations,,,,,,0%,,"O projeto está na fase de configuração da Connection String e DbContext, e em caso de erros, é necessário validar o material de apoio.",Concluído,,
+API Produtos,,,,,,100%,,,Concluído,100,100
+API Cliente/Fornecedor,,,,,,100%,,,Concluído,100,100
+API Funcionários,,,,,,100%,,,Concluído,100,100
+"API Folha de Pagamento   ",,,,,,100%,,,Concluído,100,100
+Layout Produtos,,,,,,100%,,,Concluído,100,100
+Layout Cliente/Fornecedor,,,,,,"62,5%",,,Concluído,100,"62,5"
+Layout Funcionários,,,,,,100%,,,Concluído,100,100
+Layout Folha de Pagamento,,,,,,50%,,,Concluído,100,50
+API Estoque/Movimentações,,,29/04/2026 → 06/05/2026,,,0%,,,Concluído,,
+API Pedido,,,29/04/2026 → 06/05/2026,,,0%,,,Concluído,,
+API Item do Pedido,,,29/04/2026 → 06/05/2026,,,0%,,,Concluído,,
+API Financeiro/Contas a pagar/receber,,,29/04/2026 → 06/05/2026,,,0%,,,Concluído,,
+Roteiro de Teste,,,06/05/2026 → 08/05/2026,,,0%,,,Aguardando Aprovação,,
+Apresentação de Aprovação de Layout,,,06/05/2026 → 08/05/2026,,,0%,,,Concluído,,
+"Integração JS - Produtos ",,,13/05/2026 → 22/05/2026,,,0%,,,Aguardando Aprovação,,
+Teste com usuário real,,,10/06/2026 → 12/06/2026,,,0%,,,Não iniciado,,
+Azure,,,06/05/2026 → 08/05/2026,,,0%,,,Não iniciado,,
+Manual do usuário,,,27/05/2026 → 29/05/2026,,,0%,,,Não iniciado,,
+Documentação API e Front no Repositório (readme),,,27/05/2026 → 29/05/2026,,,0%,,,Não iniciado,,
+Organização da Apresentação final,,,10/06/2026 → 12/06/2026,,,0%,,,Não iniciado,,
+Publicação do Front,,,03/06/2026,,,0%,,,Não iniciado,,
+Publicação do Back,,,03/06/2026,,,0%,,,Não iniciado,,
+Apresentação final,,,19/06/2026,,Alta,0%,,,Não iniciado,,
+"Layouts Estoque, Financeiro, Pedido e Item Pedido",,,06/05/2026 → 08/05/2026,,,0%,,,Concluído,,
+Autenticação,,,,,,0%,,,Em andamento,,
+Integração JS - Funcionário,,,13/05/2026 → 22/05/2026,,,0%,,,Aguardando Aprovação,,
+Integração JS - Pedidos,,,13/05/2026 → 22/05/2026,,,0%,,,Em andamento,,
+Integração JS - Folha de pagamento,,,13/05/2026 → 22/05/2026,,,0%,,,Em andamento,,
+Integração JS - Estoque,,,13/05/2026 → 22/05/2026,,,0%,,,Em andamento,,
+Integração JS - Financeiro,,,13/05/2026 → 22/05/2026,,,0%,,,Em andamento,,
+Integração JS - Clientes/Fornecedores,,,13/05/2026 → 22/05/2026,,,0%,,,Em andamento,,
