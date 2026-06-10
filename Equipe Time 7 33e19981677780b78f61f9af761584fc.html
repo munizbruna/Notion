@@ -1,0 +1,750 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Equipe Time 7 </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="33e19981-6777-80b7-8f61-f9af761584fc" class="page sans"><header><img class="page-cover-image" src="Equipe%20Time%207/Gemini_Generated_Image_z78hcuz78hcuz78h.png" style="object-position:center 9.950000000000003%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🍃</span></div><h1 class="page-title" dir="auto">Equipe Time 7 </h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="ltr"><figure id="33e19981-6777-801d-b9fa-fd2f0076ad6d" class="link-to-page"><a href="Equipe%20Time%207/Tarefas%2033e199816777801db9fafd2f0076ad6d.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/reorder_green.svg"/>Tarefas</a></figure></div><div style="display:contents" dir="auto"><h1 id="33e19981-6777-80c0-9e02-dfc7127702c5" class="block-color-default_background">Integrantes da Equipe</h1></div><div style="display:contents" dir="auto"><ul id="33e19981-6777-8093-b092-fd8ab7dda302" class="block-color-blue bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default"><strong>Vinícius César Machado Cardoso - </strong></mark><mark class="highlight-default"><a href="https://github.com/uBjorn">https://github.com/uBjorn</a></mark></li></ul></div><div style="display:contents" dir="auto"><ul id="33e19981-6777-8052-9009-f991b59ade40" class="block-color-red bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default"><strong>Kaique Sasaki de Campos - </strong></mark><mark class="highlight-default"><a href="https://github.com/Kazaki-Dev0">https://github.com/Kazaki-Dev0</a></mark></li></ul></div><div style="display:contents" dir="auto"><ul id="33e19981-6777-801d-af43-f607605baf02" class="block-color-yellow bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default"><strong>Giovana dos Santos Bitencorte - </strong></mark><mark class="highlight-default"><a href="https://github.com/gbitencorte">https://github.com/gbitencorte</a></mark></li></ul></div><div style="display:contents" dir="auto"><ul id="33e19981-6777-8063-94a6-e699651430ab" class="block-color-pink bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default"><strong>Beatriz de Felippo Souza Cirino -  </strong></mark><mark class="highlight-default"><a href="https://github.com/beatrizfppo">https://github.com/beatrizfppo</a></mark></li></ul></div><div style="display:contents" dir="auto"><hr id="33e19981-6777-80d2-839d-fddd193a1962"/></div><div style="display:contents" dir="auto"><h1 id="33e19981-6777-80ab-9e8a-c78a5af82ba7" class="">Resumo do Projeto</h1></div><div style="display:contents" dir="auto"><ul id="33e19981-6777-8041-817b-e08559371f6f" class="bulleted-list"><li style="list-style-type:disc">O que vocês compreenderam do que será feito (de 2 a 3 parágrafos):</li></ul></div><div style="display:contents" dir="auto"><p id="33e19981-6777-804a-886a-d48a018f6c37" class="">Este projeto tem como objetivo desenvolver um sistema ERP simplificado para resolver<br/>problemas de organização enfrentados por uma empresa simulada, como controle de<br/>estoque, vendas e financeiro. Foram identificadas diversas lacunas na questão de registros e atualização dos documentos, necessitando assim, de um programa automatizado para reverter esse cenário. Esse programa deverá conter um Banco de Dados atualizado e uma interface simples e intuitiva, visando o seu uso rápido e prático.</p></div><div style="display:contents" dir="auto"><p id="33e19981-6777-80fa-9031-ed7065066614" class="">Para seu uso, há diversos módulos separando os setores, como por exemplo: Financeiro, Funcionários, Vendas, entre outros. Em cada módulo há propriedades para organizar informações de determinado elemento e haverá uma tela para cada setor. A maioria dos módulos será atualizado automaticamente de acordo com as atividades para evitar erros, porém também haverá alguns campos manuais, como em Estoque para informar caso em produto quebre ou estrague, por exemplo. Com essas medidas, será possível garantir um comércio harmônico e um sistema gerencial confiável, solucionando os desafios e dores de nosso cliente.</p></div><div style="display:contents" dir="auto"><hr id="33e19981-6777-8072-a276-e23def20136a"/></div><div style="display:contents" dir="auto"><p id="33e19981-6777-805f-b45d-c03d0703dfd1" class="">
+</p></div><div style="display:contents" dir="auto"><ul id="33e19981-6777-805f-afb6-c3f22a7528b1" class="bulleted-list"><li style="list-style-type:disc">Padronização de nomenclaturas de Model/Variável/Afins:</li></ul></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="33e19981-6777-80e2-97ba-e8370a6a3568"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><div style="display:contents" dir="auto"><h2 id="33e19981-6777-8079-82ec-cb5cb6bb43c5" class="">Models:</h2></div><div style="display:contents" dir="auto"><h3 id="33e19981-6777-80f0-93d5-f3a01730e2eb" class=""><span style="border-bottom:0.05em solid">Produto</span></h3></div><div style="display:contents" dir="ltr"><table id="33e19981-6777-8024-9c58-c16b5cb5d4da" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80c1-b56f-c0a11ae7becf"><td id="wORC" class="" style="width:154.328125px">Id</td><td id="aLgT" class="" style="width:152.328125px"></td><td id="IWMg" class="" style="width:146.328125px">Int</td><td id="OJD|" class="" style="width:152px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-807d-8e45-fde3435fee5c"><td id="wORC" class="" style="width:154.328125px">Nome</td><td id="aLgT" class="" style="width:152.328125px"></td><td id="IWMg" class="" style="width:146.328125px">String</td><td id="OJD|" class="" style="width:152px">Select</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8056-bcb8-e004e989e50d"><td id="wORC" class="" style="width:154.328125px">Marca</td><td id="aLgT" class="" style="width:152.328125px"></td><td id="IWMg" class="" style="width:146.328125px">String</td><td id="OJD|" class="" style="width:152px">Select</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8086-9f5b-faefe9054e93"><td id="wORC" class="" style="width:154.328125px">Valor</td><td id="aLgT" class="" style="width:152.328125px"></td><td id="IWMg" class="" style="width:146.328125px">Int</td><td id="OJD|" class="" style="width:152px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80d8-acdd-cb6cf1d0592b"><td id="wORC" class="" style="width:154.328125px">Categoria</td><td id="aLgT" class="" style="width:152.328125px"></td><td id="IWMg" class="" style="width:146.328125px">String</td><td id="OJD|" class="" style="width:152px">Select</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-808c-99e1-e5f6b6304539"><td id="wORC" class="" style="width:154.328125px">Descrição</td><td id="aLgT" class="" style="width:152.328125px"></td><td id="IWMg" class="" style="width:146.328125px">String</td><td id="OJD|" class="" style="width:152px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80f4-bccc-c1ea194a5496"><td id="wORC" class="" style="width:154.328125px">FornecedorId</td><td id="aLgT" class="" style="width:152.328125px"></td><td id="IWMg" class="" style="width:146.328125px">Int</td><td id="OJD|" class="" style="width:152px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8021-a10d-dc58c8d27c86"><td id="wORC" class="" style="width:154.328125px">QtdMínimaEstoque</td><td id="aLgT" class="" style="width:152.328125px"></td><td id="IWMg" class="" style="width:146.328125px">Int</td><td id="OJD|" class="" style="width:152px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8050-808e-c6760767cd54"><td id="wORC" class="" style="width:154.328125px">QtdEstoque</td><td id="aLgT" class="" style="width:152.328125px"></td><td id="IWMg" class="" style="width:146.328125px">Int</td><td id="OJD|" class="" style="width:152px"></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="34319981-6777-8023-b24c-c0ef2123592b"/></div><div style="display:contents" dir="auto"><h3 id="33e19981-6777-80ec-a884-c39ad3d8d8a8" class=""><span style="border-bottom:0.05em solid">Estoque (Entradas e Saídas)</span></h3></div><div style="display:contents" dir="ltr"><table id="33e19981-6777-8083-ba3d-f0a2738c2fdc" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80f8-b84d-ef1b0a4d53bd"><td id="EYa@" class="" style="width:214.33333333333334px">Id</td><td id="ia|k" class="" style="width:214.33333333333334px"></td><td id="WFrq" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80da-afa7-ddf68bb23d56"><td id="EYa@" class="" style="width:214.33333333333334px">Produtos</td><td id="ia|k" class="" style="width:214.33333333333334px"></td><td id="WFrq" class="" style="width:214.33333333333334px">List</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-804c-ac83-d83d45c9d93d"><td id="EYa@" class="" style="width:214.33333333333334px">QuantidadeTotal</td><td id="ia|k" class="" style="width:214.33333333333334px"></td><td id="WFrq" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8065-a890-f9a1cdaad188"><td id="EYa@" class="" style="width:214.33333333333334px">Capacidade</td><td id="ia|k" class="" style="width:214.33333333333334px"></td><td id="WFrq" class="" style="width:214.33333333333334px">Int</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><ul id="33e19981-6777-80ec-97c6-e0c16b75baca" class="bulleted-list"><li style="list-style-type:disc">Entradas</li></ul></div><div style="display:contents" dir="ltr"><table id="34319981-6777-8029-a238-c7c6b3c0ec2f" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="34319981-6777-803c-b801-dc694bfb9456"><td id="jU|E" class="" style="width:214.33333333333334px">Id</td><td id="&lt;vG_" class="" style="width:214.33333333333334px"></td><td id="`caI" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-8024-a521-e6a63c62457c"><td id="jU|E" class="" style="width:214.33333333333334px">Data</td><td id="&lt;vG_" class="" style="width:214.33333333333334px"></td><td id="`caI" class="" style="width:214.33333333333334px">DateTime</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-8078-8f6e-d77fc6566f05"><td id="jU|E" class="" style="width:214.33333333333334px">ProdutoId</td><td id="&lt;vG_" class="" style="width:214.33333333333334px"></td><td id="`caI" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-80ed-b7e5-dc75e1f01a6c"><td id="jU|E" class="" style="width:214.33333333333334px">Quantidade</td><td id="&lt;vG_" class="" style="width:214.33333333333334px"></td><td id="`caI" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-80f2-b155-e139e84b7220"><td id="jU|E" class="" style="width:214.33333333333334px">ValorTotal (quantidade*valorUnitario do produto)</td><td id="&lt;vG_" class="" style="width:214.33333333333334px"></td><td id="`caI" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-8079-ad90-dd4c15184dca"><td id="jU|E" class="" style="width:214.33333333333334px">FornecedorId</td><td id="&lt;vG_" class="" style="width:214.33333333333334px"></td><td id="`caI" class="" style="width:214.33333333333334px">Int</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><ul id="34319981-6777-809a-b4e2-db5535b9e87c" class="bulleted-list"><li style="list-style-type:disc">Saídas</li></ul></div><div style="display:contents" dir="ltr"><table id="34319981-6777-8070-b291-da508a0fe8aa" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="34319981-6777-80a4-ae19-f21246abfa06"><td id="c]CX" class="" style="width:214.33333333333334px">Id</td><td id="sX}B" class="" style="width:214.33333333333334px"></td><td id="&gt;IHu" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-80f8-a87c-f4e6a8907941"><td id="c]CX" class="" style="width:214.33333333333334px">Data</td><td id="sX}B" class="" style="width:214.33333333333334px"></td><td id="&gt;IHu" class="" style="width:214.33333333333334px">DateTime</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-8022-8046-f717235e6070"><td id="c]CX" class="" style="width:214.33333333333334px">Motivo</td><td id="sX}B" class="" style="width:214.33333333333334px"></td><td id="&gt;IHu" class="" style="width:214.33333333333334px">String</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-809b-b89e-c6e14f1c6757"><td id="c]CX" class="" style="width:214.33333333333334px">ProdutoId</td><td id="sX}B" class="" style="width:214.33333333333334px"></td><td id="&gt;IHu" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-80dc-9f55-fec408b5f232"><td id="c]CX" class="" style="width:214.33333333333334px">Quantidade</td><td id="sX}B" class="" style="width:214.33333333333334px"></td><td id="&gt;IHu" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-80dc-b389-cc87a1619a2d"><td id="c]CX" class="" style="width:214.33333333333334px">ValorTotal (quantidade*valorUnitario do produto)</td><td id="sX}B" class="" style="width:214.33333333333334px"></td><td id="&gt;IHu" class="" style="width:214.33333333333334px">Int</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="34319981-6777-803e-a089-c0f6e603a160"/></div><div style="display:contents" dir="auto"><h3 id="33e19981-6777-8013-b34c-fdd7cbb9d596" class=""><span style="border-bottom:0.05em solid">Cliente</span></h3></div><div style="display:contents" dir="ltr"><table id="33e19981-6777-80e9-a515-c730b1baa2bd" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8075-b350-c6aa45a34dd5"><td id="ZCAM" class="" style="width:155.328125px">Id</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">Int</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-803d-ad30-d290559cfb38"><td id="ZCAM" class="" style="width:155.328125px">Nome</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">String</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-803f-b221-f8a9638f7aff"><td id="ZCAM" class="" style="width:155.328125px">DataNascimento</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">DateTime</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80ee-8730-d8e23529e7c5"><td id="ZCAM" class="" style="width:155.328125px">Email</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">String</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80ff-a87c-d09ef0df7177"><td id="ZCAM" class="" style="width:155.328125px">Telefone</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">Int</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8083-ae95-cf75e72febfc"><td id="ZCAM" class="" style="width:155.328125px">Cpf/Cnpj</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">Int</td><td id="tjZg" class="" style="width:155px">Cpf: 11 dígitos.       Cnpj: 14 dígitos.</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80da-ac5f-c6f8bd886f07"><td id="ZCAM" class="" style="width:155.328125px">Cep</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">Int</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80f4-8fab-e74897a762e0"><td id="ZCAM" class="" style="width:155.328125px">Rua</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">String</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80eb-b1c3-e40ef644e12a"><td id="ZCAM" class="" style="width:155.328125px">Bairro</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">String</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8080-ba72-d0d53bee74d2"><td id="ZCAM" class="" style="width:155.328125px">Cidade</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">String</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8087-b01f-ec498a8624f1"><td id="ZCAM" class="" style="width:155.328125px">Estado</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">String</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80a5-9cbc-ff9126ee29f5"><td id="ZCAM" class="" style="width:155.328125px">NumeroResidencia</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">Int</td><td id="tjZg" class="" style="width:155px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8099-8a40-e91acdfc9008"><td id="ZCAM" class="" style="width:155.328125px">Complemento</td><td id="jY{u" class="" style="width:152.328125px"></td><td id="}wd\" class="" style="width:162.328125px">String</td><td id="tjZg" class="" style="width:155px"></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="33e19981-6777-80df-9fe5-d204e3a0f120" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="33e19981-6777-80d3-838a-fbb4914d9708"/></div><div style="display:contents" dir="auto"><h3 id="33e19981-6777-80f9-acd3-ee7657443a56" class=""><span style="border-bottom:0.05em solid">Financeiro (Pagamentos e Recebimentos)</span></h3></div><div style="display:contents" dir="auto"><p id="34319981-6777-8037-89ee-fb15be98ab27" class="">Lucro (Recebimentos - Pagamentos)</p></div><div style="display:contents" dir="auto"><ul id="34319981-6777-80be-8251-d47562ac74f0" class="bulleted-list"><li style="list-style-type:disc">Recebimentos</li></ul></div><div style="display:contents" dir="ltr"><table id="34319981-6777-80a4-ae07-dd38939ed91a" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="34319981-6777-80a9-81cd-e3a9abdde747"><td id="LS;|" class="" style="width:214.33333333333334px">Id </td><td id="&gt;v`G" class="" style="width:214.33333333333334px"></td><td id="[iL~" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-8055-a5d3-f3931226ff79"><td id="LS;|" class="" style="width:214.33333333333334px">Valor</td><td id="&gt;v`G" class="" style="width:214.33333333333334px"></td><td id="[iL~" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-803d-a161-ca3f15f2d87e"><td id="LS;|" class="" style="width:214.33333333333334px">Descrição </td><td id="&gt;v`G" class="" style="width:214.33333333333334px"></td><td id="[iL~" class="" style="width:214.33333333333334px">String</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-807e-a516-c131a14e98b0"><td id="LS;|" class="" style="width:214.33333333333334px">DataRecebimento</td><td id="&gt;v`G" class="" style="width:214.33333333333334px"></td><td id="[iL~" class="" style="width:214.33333333333334px">DateTime</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><ul id="33e19981-6777-8022-9ad1-e860900d05d7" class="bulleted-list"><li style="list-style-type:disc">Pagamentos</li></ul></div><div style="display:contents" dir="ltr"><table id="34319981-6777-80c1-a8f4-d8df44b8f738" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="34319981-6777-8009-bbb8-e20aa41665a0"><td id="FAxY" class="" style="width:214.33333333333334px">Id </td><td id="vgJR" class="" style="width:214.33333333333334px"></td><td id="GgD}" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-80ae-b2ea-dcc5cdfe98b9"><td id="FAxY" class="" style="width:214.33333333333334px">DataPagamento </td><td id="vgJR" class="" style="width:214.33333333333334px"></td><td id="GgD}" class="" style="width:214.33333333333334px">DateTime</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-809c-afe9-ca1973dfd663"><td id="FAxY" class="" style="width:214.33333333333334px">DataVencimento </td><td id="vgJR" class="" style="width:214.33333333333334px"></td><td id="GgD}" class="" style="width:214.33333333333334px">DateTime</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-80e6-945f-dc0a635f5b06"><td id="FAxY" class="" style="width:214.33333333333334px">Valor </td><td id="vgJR" class="" style="width:214.33333333333334px"></td><td id="GgD}" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-809b-bf6a-cf6a245709f3"><td id="FAxY" class="" style="width:214.33333333333334px">Descrição </td><td id="vgJR" class="" style="width:214.33333333333334px"></td><td id="GgD}" class="" style="width:214.33333333333334px">String</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="33e19981-6777-80b2-a725-fa65d8a447fc"/></div><div style="display:contents" dir="auto"><h3 id="33e19981-6777-800b-b460-fd4d2ca7857a" class=""><span style="border-bottom:0.05em solid">Vendas</span></h3></div><div style="display:contents" dir="ltr"><table id="33e19981-6777-8056-8f6b-cccd5c354ff0" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="33e19981-6777-807a-9eb1-eacbd54da385"><td id="=]y[" class="" style="width:214.33333333333334px">Id</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-803c-8772-eb1fe461606d"><td id="=]y[" class="" style="width:214.33333333333334px">ClienteId</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80dc-8e26-f3bed03a4cfb"><td id="=]y[" class="" style="width:214.33333333333334px">Data</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">DateTime</td></tr></div><div style="display:contents" dir="ltr"><tr id="34a19981-6777-8061-834c-e724d2c0faea"><td id="=]y[" class="" style="width:214.33333333333334px">ItensVenda</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">List</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h3 id="33e19981-6777-8037-aac9-e6eb7677d948" class=""><span style="border-bottom:0.05em solid">ItensVenda</span></h3></div><div style="display:contents" dir="ltr"><table id="33e19981-6777-80d6-a3cc-d97eeca413ad" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80a5-ad33-f68b9dd92e2b"><td id="=]y[" class="" style="width:214.33333333333334px">Id</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-808d-bd15-d30a2d1b6538"><td id="=]y[" class="" style="width:214.33333333333334px">ProdutoId </td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80cc-938c-ddea258982dc"><td id="=]y[" class="" style="width:214.33333333333334px">PreçoUnitario</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-806b-895b-dedae46f60df"><td id="=]y[" class="" style="width:214.33333333333334px">Quantidade</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8054-9491-c5b484fca3ff"><td id="=]y[" class="" style="width:214.33333333333334px">VendaId</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><hr id="33e19981-6777-808a-8c27-ee03b832d920"/></div><div style="display:contents" dir="auto"><h3 id="33e19981-6777-80cf-89ab-c3d7606c3ba3" class=""><span style="border-bottom:0.05em solid">Funcionários</span></h3></div><div style="display:contents" dir="ltr"><table id="33e19981-6777-8032-b061-d56ce9a7e968" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80b9-b298-cca31c826044"><td id="=]y[" class="" style="width:214.33333333333334px">Id</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8076-9e5d-cb98a0cbc669"><td id="=]y[" class="" style="width:214.33333333333334px">Nome</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">String</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80d1-85c4-ebd81d8a9a4e"><td id="=]y[" class="" style="width:214.33333333333334px">Salário</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-8037-9ef0-f25072b9ee0e"><td id="=]y[" class="" style="width:214.33333333333334px">HoraExtra</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">Int</td></tr></div><div style="display:contents" dir="ltr"><tr id="33e19981-6777-80a5-a45c-d521e2d3da7b"><td id="=]y[" class="" style="width:214.33333333333334px">Cargo</td><td id="SoJ:" class="" style="width:214.33333333333334px"></td><td id="]\`|" class="" style="width:214.33333333333334px">String</td></tr></div></tbody></table></div></div></figure></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="33e19981-6777-80f1-910a-e1fe25265ae3"><div style="font-size:1.5em"><span class="icon">🎨</span></div><div style="width:100%"><div style="display:contents" dir="auto"><h2 id="33e19981-6777-80d2-b3dc-e63b642b20a9" class="block-color-red"><mark class="highlight-default_background">Guia de estilo:</mark></h2></div><div style="display:contents" dir="auto"><h3 id="33e19981-6777-801f-85f7-de9040b7cd14" class="">Boreal Tools</h3></div><div style="display:contents" dir="auto"><p id="33e19981-6777-80e3-95e1-c28ac54ded7e" class="">Referência: <a href="https://somostera.com/">https://somostera.com/</a></p></div><div style="display:contents" dir="ltr"><figure id="33e19981-6777-802d-b297-ee6dbc0c7fe3" class="image"><a href="Equipe%20Time%207/image.png"><img style="width:3000px" src="Equipe%20Time%207/image.png"/></a></figure></div><div style="display:contents" dir="auto"><h3 id="34319981-6777-8001-84d1-f9474c9cfd16" class=""><strong>Paleta de Cores Primárias</strong></h3></div><div style="display:contents" dir="ltr"><figure id="34319981-6777-80cd-a42f-d7564d362319" class="image"><a href="Equipe%20Time%207/PaletaCores.png"><img style="width:637.96875px" src="Equipe%20Time%207/PaletaCores.png"/></a></figure></div><div style="display:contents" dir="auto"><h3 id="34319981-6777-8022-927c-f0dde2a9f3eb" class="">Tipografia</h3></div><div style="display:contents" dir="auto"><p id="34319981-6777-8058-b864-e5fb5b6b6f04" class="">Fonte: Poppins e Jaldi.</p></div><div style="display:contents" dir="auto"><p id="34319981-6777-80aa-b784-cb90f0509c43" class="">Tamanho:<div class="indented"><div style="display:contents" dir="auto"><p id="34319981-6777-8009-aae1-e83aabeb53f0" class="">Grande - 36.</p></div><div style="display:contents" dir="auto"><p id="34319981-6777-8071-b1f5-ee836109af8c" class="">Médio - 20.</p></div><div style="display:contents" dir="auto"><p id="34319981-6777-8093-8cf2-cf3561132f76" class="">Pequeno - 16.</p></div></div></p></div></div></figure></div><div style="display:contents" dir="auto"><p id="34319981-6777-8093-8581-c87f5f9f9f0d" class="">
+</p></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="33e19981-6777-805e-9a40-d084a87e02e9"><div style="font-size:1.5em"><span class="icon">⚙</span></div><div style="width:100%"><div style="display:contents" dir="auto"><h2 id="33e19981-6777-80e8-8837-d05efbcde7dd" class=""><strong>Telas que serão desenvolvidas:</strong></h2></div><div style="display:contents" dir="auto"><p id="33e19981-6777-80ff-83c0-fae4e75b72a1" class="">Tela login</p></div><div style="display:contents" dir="auto"><p id="33e19981-6777-8081-96dd-fa6d899259aa" class="">Tela cadastro</p></div><div style="display:contents" dir="auto"><p id="33e19981-6777-8091-9401-ee364e77df1d" class="">Tela inicial que direciona para os módulos (Estoque, Financeiro, etc)</p></div><div style="display:contents" dir="auto"><p id="33e19981-6777-80e9-a4ca-c2cba177c98a" class="">Tela Estoque e de cada módulo</p></div><div style="display:contents" dir="auto"><p id="33e19981-6777-80be-821b-c666b4ac75d3" class="">Tela Produtos</p></div></div></figure></div><div style="display:contents" dir="auto"><hr id="33e19981-6777-803c-9f79-ee4b3f74b09f"/></div><div style="display:contents" dir="ltr"><figure id="33e19981-6777-80e4-9274-d079aa9740cb" class="image"><a href="Equipe%20Time%207/ai-generated-image.png"><img style="width:551.96875px" src="Equipe%20Time%207/ai-generated-image.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="35119981-6777-80b6-8fed-e63561353364" class="image"><a href="Equipe%20Time%207/image%201.png"><img style="width:704px" src="Equipe%20Time%207/image%201.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="35119981-6777-80e2-b879-eb2aecd1ed92" class="">que coisa horripilante</p></div><div style="display:contents" dir="auto"><p id="36119981-6777-80e2-9ebf-c1233388fef1" class="">
+</p></div><div style="display:contents" dir="auto"><p id="36119981-6777-80f7-b83b-c673ce9cedd4" class="">Nossa Abertura: <a href="https://youtu.be/NVJevZGrU7E?si=4LWqeRLDGiJGsI0n">https://youtu.be/NVJevZGrU7E?si=4LWqeRLDGiJGsI0n</a></p></div><div style="display:contents" dir="auto"><h1 id="33e19981-6777-80f8-acfd-e320fe7b4901" class="">Link Figma Senha:123</h1></div><div style="display:contents" dir="auto"><p id="33e19981-6777-80d8-8b48-f1726a85cda7" class=""><a href="https://www.figma.com/design/pyll5BwAj7q57trHwS2jAK/Projeto-semestral?node-id=0-1&amp;t=PoOdNTG89cui85ut-1">https://www.figma.com/design/pyll5BwAj7q57trHwS2jAK/Projeto-semestral?node-id=0-1&amp;t=PoOdNTG89cui85ut-1</a></p></div><div style="display:contents" dir="auto"><p id="34319981-6777-802b-9a6f-efbde074e1f3" class="">Link de Page Funcional IA</p></div><div style="display:contents" dir="auto"><p id="34319981-6777-80a9-adfc-e62463708a4a" class=""><a href="https://www.figma.com/make/th89NDMpp2JIcU0oZtIcfg/Car-Dealership-Interface?t=2xuW8IjHL8xpfGEn-1&amp;preview-route=%2Fdashboard">https://www.figma.com/make/th89NDMpp2JIcU0oZtIcfg/Car-Dealership-Interface?t=2xuW8IjHL8xpfGEn-1&amp;preview-route=%2Fdashboard</a></p></div><div style="display:contents" dir="ltr"><table id="34319981-6777-80b4-ab7f-f7120f5d0d56" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="34319981-6777-80c0-97f4-e657a17ad626"><td id="]qVv" class="" style="width:239.66666666666666px">Bea </td><td id="@x|}" class="" style="width:239.66666666666666px">Sasaki</td><td id="?`_i" class="" style="width:239.66666666666666px">Gi</td><td id="~a{H" class="" style="width:187px">Viní</td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-8086-bab2-e19b3871ff46"><td id="]qVv" class="" style="width:239.66666666666666px"></td><td id="@x|}" class="" style="width:239.66666666666666px"></td><td id="?`_i" class="" style="width:239.66666666666666px"></td><td id="~a{H" class="" style="width:187px"></td></tr></div><div style="display:contents" dir="ltr"><tr id="34319981-6777-80c2-bb9d-e5cc731ddcb0"><td id="]qVv" class="" style="width:239.66666666666666px"></td><td id="@x|}" class="" style="width:239.66666666666666px"></td><td id="?`_i" class="" style="width:239.66666666666666px"></td><td id="~a{H" class="" style="width:187px"></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h1 id="34a19981-6777-800b-9894-c3696a66a28c" class="">Link do Front:</h1></div><div style="display:contents" dir="auto"><p id="34a19981-6777-806e-b694-f076950d4631" class=""><a href="https://github.com/Kazaki-Dev0/Boreal-Tolls-Front">https://github.com/Kazaki-Dev0/Boreal-Tolls-Front</a></p></div><div style="display:contents" dir="auto"><p id="34a19981-6777-80ef-8d15-e5e826ec6eb1" class="">
+</p></div><div style="display:contents" dir="auto"><h1 id="34a19981-6777-80a7-b8db-fe4da8b52a99" class="">Link do Back:</h1></div><div style="display:contents" dir="auto"><p id="34a19981-6777-8090-9938-c3a9ce642e07" class=""><a href="https://github.com/beatrizfppo/Projeto.Time7.Api">https://github.com/beatrizfppo/Projeto.Time7.Api</a></p></div><div style="display:contents" dir="auto"><p id="34a19981-6777-80a4-a97f-f33f9d3540ed" class="">
+</p></div><div style="display:contents" dir="auto"><p id="34a19981-6777-8067-abd2-c84954f5d14e" class="">Feedback 1: </p></div><div style="display:contents" dir="auto"><ul id="34a19981-6777-8034-9512-fdfe5bafbb9d" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">#1 Não tem classe Estoque<br/>dá pra simplificar ficando só isso aqui ta!? Substitui tudo sabe?!</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><p id="34a19981-6777-8059-8adb-caa94f81cf28" class="">public class Movimentacao<br/>{<br/>public int Id { get; set; }<br/>public DateTime Data { get; set; }<br/>public int ProdutoId { get; set; }<br/>public int Quantidade { get; set; }<br/>public string Tipo { get; set; } // se entrada ou saída<br/>public string? Motivo { get; set; } // campo opcional que você pode tratar no front que se for saída é obrigatório</p></div><div style="display:contents" dir="auto"><p id="34a19981-6777-8060-b6b4-ff3a36481b9b" class="">}</p></div><div style="display:contents" dir="auto"><ul id="34a19981-6777-80b4-ac0f-c750e9c43829" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">#2 Não criaram Holerite, folha de pagamento do funcionário</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><ul id="34a19981-6777-8030-b2a5-cec354f512be" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">#3 Em funcionário eu não vou ter Hora Extra, essa informação seria na folha de pagamento, aqui são os dados cadastrais do func, como endereço, data de nasc</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><ul id="34a19981-6777-80b6-b20a-fd4dbca5dd35" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">#4 Fornecedor e Cliente?</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><p id="34a19981-6777-805e-835e-d56763a1cfbb" class="">!! Pronto, valida, corrige e sobe ai</p></div><div style="display:contents" dir="auto"><p id="36f19981-6777-8079-a4d3-feb22f8c1eb5" class="">
+</p></div><div style="display:contents" dir="auto"><h1 id="36f19981-6777-8057-bf72-c403a5739d04" class="">Link do servidor</h1></div><div style="display:contents" dir="auto"><p id="34a19981-6777-80d9-8e46-d8a8c68a6532" class=""><a href="https://api-time7.azurewebsites.net/swagger/index.html">Swagger UI</a></p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
