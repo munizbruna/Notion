@@ -1,0 +1,1269 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Equipe Winx’s</title>
+	<style>
+		/* cspell:disable-file */
+		/* webkit printing magic: print all background colors */
+		html {
+			-webkit-print-color-adjust: exact;
+		}
+
+		* {
+			box-sizing: border-box;
+			-webkit-print-color-adjust: exact;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		@media only screen {
+			body {
+				margin: 2em auto;
+				max-width: 900px;
+				color: rgb(55, 53, 47);
+			}
+		}
+
+		body {
+			line-height: 1.5;
+			white-space: pre-wrap;
+		}
+
+		a,
+		a.visited {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		.pdf-relative-link-path {
+			font-size: 80%;
+			color: #444;
+		}
+
+		h1,
+		h2,
+		h3 {
+			letter-spacing: -0.01em;
+			line-height: 1.2;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		/* Override strong tags inside headings to maintain consistent weight */
+		h1 strong,
+		h2 strong,
+		h3 strong {
+			font-weight: 600;
+		}
+
+		.page-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		h1 {
+			font-size: 1.875rem;
+			margin-top: 1.875rem;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+			margin-top: 1.5rem;
+		}
+
+		h3 {
+			font-size: 1.25rem;
+			margin-top: 1.25rem;
+		}
+
+		.source {
+			border: 1px solid #ddd;
+			border-radius: 3px;
+			padding: 1.5em;
+			word-break: break-all;
+		}
+
+		.callout {
+			border-radius: 10px;
+			padding: 1rem;
+		}
+
+		figure {
+			margin: 1.25em 0;
+			page-break-inside: avoid;
+		}
+
+		figcaption {
+			opacity: 0.5;
+			font-size: 85%;
+			margin-top: 0.5em;
+		}
+
+		mark {
+			background-color: transparent;
+		}
+
+		.indented {
+			padding-left: 1.5em;
+		}
+
+		hr {
+			background: transparent;
+			display: block;
+			width: 100%;
+			height: 1px;
+			visibility: visible;
+			border: none;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only print {
+			img {
+				max-height: 100vh;
+				object-fit: contain;
+			}
+
+			table.collection-content {
+				width: 100%;
+				table-layout: fixed;
+			}
+
+			table.collection-content th,
+			table.collection-content td {
+				overflow-wrap: anywhere;
+			}
+
+			table.collection-content td>.user,
+			table.collection-content td>time {
+				white-space: pre-wrap;
+			}
+		}
+
+		@page {
+			margin: 1in;
+		}
+
+		.collection-content-wrapper {
+			overflow-x: auto;
+		}
+
+		@media only print {
+			.collection-content-wrapper {
+				overflow-x: visible;
+			}
+		}
+
+		.collection-content {
+			font-size: 0.875rem;
+		}
+
+		.collection-content td {
+			white-space: pre-wrap;
+			word-break: break-word;
+		}
+
+		.column-list {
+			display: flex;
+			gap: 46px;
+		}
+
+		.column {
+			min-width: 0;
+			overflow: hidden;
+		}
+
+		.column>*:first-child {
+			margin-top: 0;
+		}
+
+		.table_of_contents-item {
+			display: block;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			padding: 0.125rem;
+		}
+
+		.table_of_contents-indent-1 {
+			margin-left: 1.5rem;
+		}
+
+		.table_of_contents-indent-2 {
+			margin-left: 3rem;
+		}
+
+		.table_of_contents-indent-3 {
+			margin-left: 4.5rem;
+		}
+
+		.table_of_contents-link {
+			text-decoration: none;
+			opacity: 0.7;
+			border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid rgba(55, 53, 47, 0.09);
+		}
+
+		table {
+			border-collapse: collapse;
+			border-left: none;
+			border-right: none;
+		}
+
+		th,
+		td {
+			font-weight: normal;
+			padding: 0.25em 0.5em;
+			line-height: 1.5;
+			min-height: 1.5em;
+			text-align: left;
+		}
+
+		th {
+			color: rgba(55, 53, 47, 0.6);
+		}
+
+		ol,
+		ul {
+			margin: 0;
+			margin-block-start: 0.6em;
+			margin-block-end: 0.6em;
+		}
+
+		li>ol:first-child,
+		li>ul:first-child {
+			margin-block-start: 0.6em;
+		}
+
+		ul>li {
+			list-style: disc;
+		}
+
+		ul.to-do-list {
+			padding-inline-start: 0;
+		}
+
+		ul.to-do-list>li {
+			list-style: none;
+		}
+
+		.to-do-children-checked {
+			text-decoration: line-through;
+			opacity: 0.375;
+		}
+
+		ul.toggle>li {
+			list-style: none;
+		}
+
+		ul {
+			padding-inline-start: 1.7em;
+		}
+
+		ul>li {
+			padding-left: 0.1em;
+		}
+
+		ol {
+			padding-inline-start: 1.6em;
+		}
+
+		ol.numbered-list.numbered-list-digits-2 {
+			padding-inline-start: 2em;
+		}
+
+		ol.numbered-list.numbered-list-digits-3plus {
+			padding-inline-start: 2.4em;
+		}
+
+		ol>li {
+			padding-left: 0.2em;
+		}
+
+		.mono ol {
+			padding-inline-start: 2em;
+		}
+
+		.mono ol>li {
+			text-indent: -0.4em;
+		}
+
+		.toggle {
+			padding-inline-start: 0em;
+			list-style-type: none;
+		}
+
+		/* Indent toggle children */
+		.toggle>li>details {
+			padding-left: 1.7em;
+		}
+
+		.toggle>li>details>summary {
+			margin-left: -1.1em;
+		}
+
+		.selected-value {
+			display: inline-block;
+			padding: 0 0.5em;
+			background: rgba(206, 205, 202, 0.5);
+			border-radius: 3px;
+			margin-right: 0.5em;
+			margin-top: 0.3em;
+			margin-bottom: 0.3em;
+			white-space: nowrap;
+		}
+
+		.collection-title {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		.page-description {
+			margin-bottom: 2em;
+		}
+
+		.simple-table {
+			margin-top: 1em;
+			font-size: 0.875rem;
+			empty-cells: show;
+		}
+
+		.simple-table td {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table th {
+			height: 29px;
+			min-width: 120px;
+		}
+
+		.simple-table-header-color {
+			background: rgb(247, 246, 243);
+			color: black;
+		}
+
+		.simple-table-header {
+			font-weight: 500;
+		}
+
+		time {
+			opacity: 0.5;
+		}
+
+		.icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 1.2em;
+			max-height: 1.2em;
+			text-decoration: none;
+			vertical-align: text-bottom;
+			margin-right: 0.5em;
+		}
+
+		img.icon {
+			border-radius: 3px;
+		}
+
+		.callout img.notion-static-icon {
+			width: 1em;
+			height: 1em;
+		}
+
+		.callout p {
+			margin: 0;
+		}
+
+		.callout h1,
+		.callout h2,
+		.callout h3 {
+			margin: 0 0 0.6rem;
+		}
+
+		.user-icon {
+			width: 1.5em;
+			height: 1.5em;
+			border-radius: 100%;
+			margin-right: 0.5rem;
+		}
+
+		.user-icon-inner {
+			font-size: 0.8em;
+		}
+
+		.text-icon {
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		.page-cover-image {
+			display: block;
+			object-fit: cover;
+			width: 100%;
+			max-height: 30vh;
+		}
+
+		.page-header-icon {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.page-header-icon-with-cover {
+			margin-top: -0.72em;
+			margin-left: 0.07em;
+		}
+
+		.page-header-icon img {
+			border-radius: 3px;
+		}
+
+		.link-to-page {
+			margin: 1em 0;
+			padding: 0;
+			border: none;
+			font-weight: 500;
+		}
+
+		p>.user {
+			opacity: 0.5;
+		}
+
+		td>.user,
+		td>time {
+			white-space: nowrap;
+		}
+
+		input[type="checkbox"] {
+			transform: scale(1.5);
+			margin-right: 0.6em;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+
+		.image {
+			border: none;
+			margin: 1.5em 0;
+			padding: 0;
+			border-radius: 0;
+			text-align: center;
+		}
+
+		.code,
+		code {
+			background: rgba(135, 131, 120, 0.15);
+			border-radius: 3px;
+			padding: 0.2em 0.4em;
+			border-radius: 3px;
+			font-size: 85%;
+			tab-size: 2;
+		}
+
+		code {
+			color: #eb5757;
+		}
+
+		.code {
+			padding: 1.5em 1em;
+		}
+
+		.code-wrap {
+			white-space: pre-wrap;
+			word-break: break-all;
+		}
+
+		.code>code {
+			background: none;
+			padding: 0;
+			font-size: 100%;
+			color: inherit;
+		}
+
+		blockquote {
+			font-size: 1em;
+			margin: 1em 0;
+			padding-left: 1em;
+			border-left: 3px solid rgb(55, 53, 47);
+		}
+
+		blockquote.quote-large {
+			font-size: 1.25em;
+		}
+
+		.bookmark {
+			text-decoration: none;
+			max-height: 8em;
+			padding: 0;
+			display: flex;
+			width: 100%;
+			align-items: stretch;
+		}
+
+		.bookmark-title {
+			font-size: 0.85em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 1.75em;
+			white-space: nowrap;
+		}
+
+		.bookmark-text {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.bookmark-info {
+			flex: 4 1 180px;
+			padding: 12px 14px 14px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		.bookmark-image {
+			width: 33%;
+			flex: 1 1 180px;
+			display: block;
+			position: relative;
+			object-fit: cover;
+			border-radius: 1px;
+		}
+
+		.bookmark-description {
+			color: rgba(55, 53, 47, 0.6);
+			font-size: 0.75em;
+			overflow: hidden;
+			max-height: 4.5em;
+			word-break: break-word;
+		}
+
+		.bookmark-href {
+			font-size: 0.75em;
+			margin-top: 0.25em;
+		}
+
+		.sans {
+			font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+
+		.code {
+			font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+		}
+
+		.serif {
+			font-family: Lyon-Text, Georgia, ui-serif, serif;
+		}
+
+		.mono {
+			font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+		}
+
+		.pdf .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .sans {
+			font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+		}
+
+		.pdf .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .code {
+			font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.pdf .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .serif {
+			font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+		}
+
+		.pdf .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+		}
+
+		.pdf:lang(zh-CN) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+		}
+
+		.pdf:lang(zh-TW) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+		}
+
+		.pdf:lang(ko-KR) .mono {
+			font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+		}
+
+		.highlight-default {
+			color: rgba(44, 44, 43, 1);
+		}
+
+		.highlight-gray {
+			color: rgba(125, 122, 117, 1);
+			fill: rgba(125, 122, 117, 1);
+		}
+
+		.highlight-brown {
+			color: rgba(159, 118, 90, 1);
+			fill: rgba(159, 118, 90, 1);
+		}
+
+		.highlight-orange {
+			color: rgba(210, 123, 45, 1);
+			fill: rgba(210, 123, 45, 1);
+		}
+
+		.highlight-yellow {
+			color: rgba(203, 148, 52, 1);
+			fill: rgba(203, 148, 52, 1);
+		}
+
+		.highlight-teal {
+			color: rgba(80, 148, 110, 1);
+			fill: rgba(80, 148, 110, 1);
+		}
+
+		.highlight-blue {
+			color: rgba(56, 125, 201, 1);
+			fill: rgba(56, 125, 201, 1);
+		}
+
+		.highlight-purple {
+			color: rgba(154, 107, 180, 1);
+			fill: rgba(154, 107, 180, 1);
+		}
+
+		.highlight-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.highlight-red {
+			color: rgba(207, 81, 72, 1);
+			fill: rgba(207, 81, 72, 1);
+		}
+
+		.highlight-default_background {
+			color: rgba(44, 44, 43, 1);
+		}
+
+		.highlight-gray_background {
+			background: rgba(42, 28, 0, 0.07);
+		}
+
+		.highlight-brown_background {
+			background: rgba(139, 46, 0, 0.086);
+		}
+
+		.highlight-orange_background {
+			background: rgba(224, 101, 1, 0.129);
+		}
+
+		.highlight-yellow_background {
+			background: rgba(211, 168, 0, 0.137);
+		}
+
+		.highlight-teal_background {
+			background: rgba(0, 100, 45, 0.09);
+		}
+
+		.highlight-blue_background {
+			background: rgba(0, 124, 215, 0.094);
+		}
+
+		.highlight-purple_background {
+			background: rgba(102, 0, 178, 0.078);
+		}
+
+		.highlight-pink_background {
+			background: rgba(197, 0, 93, 0.086);
+		}
+
+		.highlight-red_background {
+			background: rgba(223, 22, 0, 0.094);
+		}
+
+		.block-color-default {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray {
+			color: rgba(125, 122, 117, 1);
+			fill: rgba(125, 122, 117, 1);
+		}
+
+		.block-color-brown {
+			color: rgba(159, 118, 90, 1);
+			fill: rgba(159, 118, 90, 1);
+		}
+
+		.block-color-orange {
+			color: rgba(210, 123, 45, 1);
+			fill: rgba(210, 123, 45, 1);
+		}
+
+		.block-color-yellow {
+			color: rgba(203, 148, 52, 1);
+			fill: rgba(203, 148, 52, 1);
+		}
+
+		.block-color-teal {
+			color: rgba(80, 148, 110, 1);
+			fill: rgba(80, 148, 110, 1);
+		}
+
+		.block-color-blue {
+			color: rgba(56, 125, 201, 1);
+			fill: rgba(56, 125, 201, 1);
+		}
+
+		.block-color-purple {
+			color: rgba(154, 107, 180, 1);
+			fill: rgba(154, 107, 180, 1);
+		}
+
+		.block-color-pink {
+			color: rgba(193, 76, 138, 1);
+			fill: rgba(193, 76, 138, 1);
+		}
+
+		.block-color-red {
+			color: rgba(207, 81, 72, 1);
+			fill: rgba(207, 81, 72, 1);
+		}
+
+		.block-color-default_background {
+			color: inherit;
+			fill: inherit;
+		}
+
+		.block-color-gray_background {
+			background: rgba(240, 239, 237, 1);
+		}
+
+		.block-color-brown_background {
+			background: rgba(245, 237, 233, 1);
+		}
+
+		.block-color-orange_background {
+			background: rgba(251, 235, 222, 1);
+		}
+
+		.block-color-yellow_background {
+			background: rgba(249, 243, 220, 1);
+		}
+
+		.block-color-teal_background {
+			background: rgba(232, 241, 236, 1);
+		}
+
+		.block-color-blue_background {
+			background: rgba(229, 242, 252, 1);
+		}
+
+		.block-color-purple_background {
+			background: rgba(243, 235, 249, 1);
+		}
+
+		.block-color-pink_background {
+			background: rgba(250, 233, 241, 1);
+		}
+
+		.block-color-red_background {
+			background: rgba(252, 233, 231, 1);
+		}
+
+		.select-value-color-default {
+			background-color: rgba(42, 28, 0, 0.07);
+		}
+
+		.select-value-color-gray {
+			background-color: rgba(28, 19, 1, 0.11);
+		}
+
+		.select-value-color-brown {
+			background-color: rgba(127, 51, 0, 0.156);
+		}
+
+		.select-value-color-orange {
+			background-color: rgba(196, 88, 0, 0.203);
+		}
+
+		.select-value-color-yellow {
+			background-color: rgba(209, 156, 0, 0.282);
+		}
+
+		.select-value-color-green {
+			background-color: rgba(0, 96, 38, 0.156);
+		}
+
+		.select-value-color-blue {
+			background-color: rgba(0, 118, 217, 0.203);
+		}
+
+		.select-value-color-purple {
+			background-color: rgba(92, 0, 163, 0.141);
+		}
+
+		.select-value-color-pink {
+			background-color: rgba(183, 0, 78, 0.152);
+		}
+
+		.select-value-color-red {
+			background-color: rgba(206, 24, 0, 0.164);
+		}
+
+		.checkbox {
+			display: inline-flex;
+			vertical-align: text-bottom;
+			width: 16;
+			height: 16;
+			background-size: 16px;
+			margin-left: 2px;
+			margin-right: 5px;
+		}
+
+		.checkbox-on {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+
+		.checkbox-off {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+		}
+	</style>
+</head>
+
+<body>
+	<article id="33e19981-6777-80be-8875-f6c8258dd253" class="page sans">
+		<header><img class="page-cover-image" src="Equipe%20Winx%E2%80%99s/image.png"
+				style="object-position:center 50%" />
+			<div class="page-header-icon page-header-icon-with-cover"><img class="icon notion-static-icon"
+					src="https://app.notion.com/icons/feather_blue.svg" /></div>
+			<h1 class="page-title" dir="auto">Equipe Winx’s</h1>
+			<p class="page-description" dir="auto">Baixe <a href="5a249022-765d-41b6-a501-9dcd187b7db0_ExportBlock-b97c42fa-f451-490f-b5ba-4183ed2e7872.zip">aqui</a> todo o material</p>
+		</header>
+		<div class="page-body">
+			<div style="display:contents" dir="ltr">
+				<figure id="33e19981-6777-8058-80b4-f449cddf4beb" class="link-to-page"><a
+						href="Equipe%20Winx%E2%80%99s/Relatorio%2033e199816777805880b4f449cddf4beb.html"><img
+							class="icon notion-static-icon"
+							src="https://app.notion.com/icons/folder_blue.svg" />Relatorio</a></figure>
+			</div>
+			<div style="display:contents" dir="auto">
+				<h1 id="33e19981-6777-8024-94ee-da1e5aaf9b90" class="">Integrantes da equipe</h1>
+			</div>
+			<div style="display:contents" dir="auto">
+				<ul id="33e19981-6777-8026-8684-fb97faabbb94" class="block-color-purple_background bulleted-list">
+					<li style="list-style-type:disc">Yasmim Livon</li>
+				</ul>
+			</div>
+			<div style="display:contents" dir="auto">
+				<ul id="33e19981-6777-8015-91c0-f3b5d35ed5fd" class="block-color-pink_background bulleted-list">
+					<li style="list-style-type:disc">Isabela Machado</li>
+				</ul>
+			</div>
+			<div style="display:contents" dir="auto">
+				<ul id="33e19981-6777-80f9-bb85-e9675732bf0b" class="block-color-red_background bulleted-list">
+					<li style="list-style-type:disc">Brenno dos Santos</li>
+				</ul>
+			</div>
+			<div style="display:contents" dir="auto">
+				<ul id="33e19981-6777-80a3-b163-d5c4f4d816dc" class="block-color-blue_background bulleted-list">
+					<li style="list-style-type:disc">Kaick Flauzino</li>
+				</ul>
+			</div>
+			<div style="display:contents" dir="auto">
+				<hr id="33e19981-6777-802c-a7be-e02621814c61" />
+			</div>
+			<div style="display:contents" dir="auto">
+				<h1 id="33e19981-6777-8007-9a2a-e4a369cbd0e0" class="">Resumo do Projeto</h1>
+			</div>
+			<div style="display:contents" dir="auto">
+				<ul id="33e19981-6777-804c-886d-c1d99e6d044b" class="bulleted-list">
+					<li style="list-style-type:disc"><strong>O que será feito?</strong><br /></li>
+				</ul>
+			</div>
+			<div style="display:contents" dir="auto">
+				<p id="33e19981-6777-8084-9482-d43823c5c168" class="">O projeto consiste no desenvolvimento de um
+					Enterprise Resource Planning (ERP) projetado para centralizar e otimizar os pilares fundamentais da
+					operação empresarial: Estoque, Vendas, Financeiro e Recursos Humanos. Ao unificar essas frentes em
+					uma plataforma única e intuitiva, o sistema elimina silos de informação, permitindo uma gestão de
+					cadastros de clientes e fornecedores muito mais assertiva e um controle de inventário rigoroso,
+					essencial para a saúde operacional do negócio.</p>
+			</div>
+			<div style="display:contents" dir="auto">
+				<p id="33e19981-6777-8039-b7e7-e75336c20354" class="">O grande diferencial estratégico reside na
+					automação inteligente do fluxo de trabalho, onde cada transação de venda dispara, em tempo real, a
+					atualização do estoque e o lançamento imediato no módulo financeiro. Essa integração nativa não
+					apenas anula falhas humanas e retrabalhos, como também transforma dados brutos em inteligência de
+					negócio, garantindo que o gestor tenha agilidade total e precisão absoluta na tomada de decisões
+					críticas para o crescimento da empresa.</p>
+			</div>
+			<div style="display:contents" dir="auto">
+				<hr id="33e19981-6777-8079-b6eb-f1f25d487584" />
+			</div>
+			<div style="display:contents" dir="auto">
+				<ul id="33e19981-6777-803d-98f7-c290d459b04a" class="bulleted-list">
+					<li style="list-style-type:disc"><strong>Padronização de Nomenclaturas :</strong>
+						<div style="display:contents" dir="auto">
+							<p id="33e19981-6777-80f2-a446-fca901671ccc" class=""><strong>Banco de Dados
+									(Models):</strong> Cliente, Entradas, Venda, Financeiro: Recebimentos e Pagamentos,
+								Fornecedor, Produto, Funcionário, Itens Venda.</p>
+						</div>
+						<div style="display:contents" dir="auto">
+							<p id="33e19981-6777-8040-aa5a-e93bace687e5" class=""><strong>Variáveis e Funções:</strong>
+								Utilizaremos o padrão “QtdEstoque, Nome, Email, CPF, e etc”.</p>
+						</div>
+						<div style="display:contents" dir="auto">
+							<p id="33e19981-6777-8072-a157-ed4a4d00bf23" class=""><strong>IDs:</strong> Toda tabela terá
+								uma chave primária simples denominada apenas como “Id”.</p>
+						</div>
+						<div style="display:contents" dir="auto">
+							<hr id="33e19981-6777-806f-aa1a-eda3e7c16715" />
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div style="display:contents" dir="auto">
+				<ul id="33e19981-6777-8020-b2ea-e1d09653c35e" class="bulleted-list">
+					<li style="list-style-type:disc"><strong>Guia de Estilo :</strong>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-80a9-9d17-c2df68e10c0b"
+								class="block-color-blue_background bulleted-list">
+								<li style="list-style-type:circle"><strong>Destaque Principal:</strong> <strong>Azul
+										Royal Vibrante</strong> (Para botões de ação, ícones principais e
+									links).<code>4169E1</code></li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-80ab-9c93-cf8562b10b96" class="block-color-default bulleted-list">
+								<li style="list-style-type:circle"><strong>Fundo Principal:</strong>
+									<strong>Branco</strong> (Para áreas de trabalho e tabelas, garantindo máxima
+									legibilidade).<code>F5F5F7</code></li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-8064-b6ec-f873032cf9c6"
+								class="block-color-gray_background bulleted-list">
+								<li style="list-style-type:circle"><strong>Fundo de Apoio:</strong> <strong>Cinza
+										Gelo</strong> (Para barras laterais, menus de navegação e divisórias, criando
+									separação visual sem poluição). <code>DADCDB</code></li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-8014-9483-ca2d9c21cba8"
+								class="block-color-default_background bulleted-list">
+								<li style="list-style-type:circle"><strong>Tipografia:</strong> <strong>Preto</strong>
+									(Para textos e títulos, garantindo máxima legibilidade). Utilização da fonte
+									<strong>Inter</strong> ou <strong>Open Sans</strong>. Títulos em <strong>Negrito
+										(Bold)</strong> para autoridade e números em fontes de largura fixa para
+									facilitar a leitura de valores financeiros. <code><strong>000000</strong></code>
+								</li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<hr id="33e19981-6777-8073-92e9-dda7e2672201" />
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div style="display:contents" dir="auto">
+				<ul id="33e19981-6777-80be-8cd7-cf3c10e39017" class="bulleted-list">
+					<li style="list-style-type:disc"><strong>Telas que serão desenvolvidas :</strong>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-8052-85dd-f17fef1b267e" class="bulleted-list">
+								<li style="list-style-type:circle">Cadastro(cliente, fornecedor, produto, venda);</li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-8067-a7d1-fe1468cfc9b6" class="bulleted-list">
+								<li style="list-style-type:circle">Página de início;</li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-80c4-8042-d38d72f96421" class="bulleted-list">
+								<li style="list-style-type:circle">Sessão de Produtos;</li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-8037-9537-f1c4d6a9a727" class="bulleted-list">
+								<li style="list-style-type:circle">Gestão de pagamentos;</li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-8066-bf15-c4a043aa0abd" class="bulleted-list">
+								<li style="list-style-type:circle">Login para clientes e gestores;</li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-8064-8808-ceb0e77156a0" class="bulleted-list">
+								<li style="list-style-type:circle">Página do Produto (ex: quantidade mínima, preço e
+									etc);</li>
+							</ul>
+						</div>
+						<div style="display:contents" dir="auto">
+							<ul id="33e19981-6777-80d1-9f39-f3409bbedf22" class="bulleted-list">
+								<li style="list-style-type:circle">RH;</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div style="display:contents" dir="auto">
+				<p id="33e19981-6777-80f2-bc56-d4550b0cc4e2" class="">
+				</p>
+			</div>
+			<div style="display:contents" dir="auto">
+				<ul id="33e19981-6777-800a-a38b-c59b47b21e9d" class="bulleted-list">
+					<li style="list-style-type:disc"><strong>Informações que compõe as telas :</strong></li>
+				</ul>
+			</div>
+			<div style="display:contents" dir="auto">
+				<p id="33e19981-6777-809a-bc98-d99abbb3d6ee" class="">
+				<div class="indented">
+					<div style="display:contents" dir="auto">
+						<ul id="33e19981-6777-80db-ac4b-cbff574ec528" class="bulleted-list">
+							<li style="list-style-type:disc">Cadastro:<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-8089-9ee3-eb4e384e798d" class=""><strong>Campos
+											Cliente:</strong> <strong>Inputs de texto</strong> para Nome, Telefone,
+										Email, CPF, CEP, Número residencial e Complemento; <strong>Input tipo
+											Date</strong> para Data de Nascimento; <strong>Input tipo Password</strong>
+										para Criar Senha.</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-8065-b160-d79df8177d19" class=""><strong>Campos
+											Fornecedor:</strong> <strong>Inputs de texto</strong> para Nome, Telefone,
+										CNPJ, Empresa, Email e Cidade; <strong>Form Select</strong> para Estado;
+										<strong>Input tipo Password</strong> para Criar Senha.</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-807f-bfa0-de63da065559" class=""><strong>Campos
+											Funcionário:</strong> <strong>Inputs de texto</strong> para Nome, Telefone,
+										CPF, CEP e Empresa; <strong>Form Select</strong> para Cargo; <strong>Input tipo
+											Email</strong>; <strong>Input tipo Password</strong> para Criar Senha.</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-80fc-b057-c4d94d315c67" class=""><strong>Ação:</strong>
+										<strong>Botão (Button)</strong> &quot;Enviar&quot; com destaque em Azul Royal.
+									</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-801a-93f6-f9a18e5ff304" class="">
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div style="display:contents" dir="auto">
+						<ul id="33e19981-6777-80f4-ba1e-d5ab459893d5" class="bulleted-list">
+							<li style="list-style-type:disc">Página de início:<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-80cf-b012-fca245b81182" class=""><strong>Visão
+											Cliente:</strong> <strong>Input de busca</strong> para produtos;
+										<strong>Form Select</strong> para filtros de Categoria e Marcas;
+										<strong>Componente Slider</strong> para filtrar valores; <strong>Badges</strong>
+										(etiquetas) para destacar cupons; <strong>Ícones clicáveis</strong> para
+										Carrinho e Central de ajuda.</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-80a9-a1cf-c11e08197e91" class=""><strong>Visão Fornecedor
+											(Cadastrar produtos):</strong> <strong>Inputs de texto</strong> para Nome e
+										Código; <strong>Input numérico</strong> para Quantidade disponível e Mínima;
+										<strong>Textarea</strong> para Descrição; <strong>Input de Valor</strong> para
+										Preço unitário; <strong>Botão de deletar</strong> (Remover).</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-808a-92be-d27016454f6a" class=""><strong>Visão Funcionário
+											(Cadastrar Venda):</strong> <strong>Input tipo Date</strong> para data;
+										<strong>Input de Valor</strong> para Preço e Desconto; <strong>Form
+											Select</strong> para Status do pagamento e Status de Entrega; <strong>Input
+											numérico</strong> para Quantidade.</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="34319981-6777-802f-924e-dc2b31cfcf11" class="">
+									</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-80f6-b068-e99bc271b932" class="">
+									</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<ul id="33e19981-6777-80da-9322-e69bcb7cbf26" class="bulleted-list">
+										<li style="list-style-type:circle"><strong>Na tela de início do Fornecedor, deve
+												conter:Cadastrar produtos:Inputs de texto</strong> para Nome do produto
+											e o código do produto (Id); <strong>Inputs numéricos</strong> para a
+											quantidade disponível e a quantidade mínima por pedido; <strong>Botão
+												(Button)</strong> com ícone de lixeira para a opção de remover o
+											produto; <strong>Textarea</strong> para descrição do produto; <strong>Input
+												de valor</strong> para o valor unitário.</li>
+									</ul>
+								</div>
+								<div style="display:contents" dir="auto">
+									<ul id="33e19981-6777-8030-8f35-faf57b5506a3" class="bulleted-list">
+										<li style="list-style-type:circle"><strong>Cadastrar Venda: Input tipo
+												Date</strong> para a Data da venda do produto; <strong>Input de
+												valor</strong> para Preço e Desconto; <strong>Form Select</strong>
+											(Caixa de seleção) para Nome do Fornecedor; <strong>Input de texto</strong>
+											para Código da compra, Destino e código do cupom; <strong>Form
+												Select</strong> para Status do pagamento (Ex: Pendente, Pago) e Status
+											de Entrega (Ex: Em separação, Enviado); <strong>Input numérico</strong> para
+											Quantidade de produto vendido.</li>
+									</ul>
+								</div>
+								<div style="display:contents" dir="auto">
+									<ul id="33e19981-6777-8038-ac11-c456538d64f5" class="bulleted-list">
+										<li style="list-style-type:circle"><strong>Página do produto: Componente de
+												Image Upload/Display</strong> para a Imagem do produto; <strong>Input
+												numérico (Stepper)</strong> para selecionar a quantidade do produto;
+											<strong>Texto em destaque</strong> para o valor unitário; <strong>Bloco de
+												texto</strong> para descrição do produto e informações do fornecedor;
+											<strong>Textarea</strong> para a central de dúvidas; <strong>Componente de
+												Estrelas (Rating)</strong> para avaliações; <strong>Label</strong> para
+											a marca do produto e <strong>Botão (Button)</strong> &quot;Comprar&quot;.
+										</li>
+									</ul>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="34319981-6777-8007-8cee-cf424b701a0a" class="">
+									</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<ul id="34319981-6777-80f6-9539-d588fba946d5" class="bulleted-list">
+										<li style="list-style-type:circle"><strong>Na tela do Funcionário deve conter:
+												Cards informativos</strong> exibindo Horas trabalhadas e total de vendas
+											do dia; <strong>Inputs de texto (somente leitura)</strong> para cargo atual
+											e salário; <strong>Input numérico ou Slider</strong> para o percentual de
+											vendas; <strong>Input tipo Time</strong> para Horas Extras; <strong>Botão
+												(Button)</strong> para gerar e baixar o Relatório de vendas realizadas
+											em PDF.</li>
+									</ul>
+								</div>
+								<div style="display:contents" dir="auto">
+									<ul id="34319981-6777-800d-a27e-f4b8a95e7499" class="bulleted-list">
+										<li style="list-style-type:circle"><strong>Login para clientes, Funcionário e
+												Fornecedores:Input de texto</strong> para Identificação (Email/CPF ou
+											CNPJ); <strong>Input tipo Password</strong> para a senha; <strong>Botão
+												(Button)</strong> &quot;Entrar&quot; em Azul Royal;
+											<strong>Checkbox</strong> para a opção &quot;Lembrar acesso&quot;.</li>
+									</ul>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-8001-887e-c7371a0afa2d" class="">
+									</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<ul id="33e19981-6777-80cd-8961-dc5494a91ef0" class="bulleted-list">
+										<li style="list-style-type:circle">Financeiro:<div style="display:contents"
+												dir="auto">
+												<p id="33e19981-6777-80ca-9b5e-e4d44773da87" class="">Datas e valores
+													dos gastos. </p>
+											</div>
+											<div style="display:contents" dir="auto">
+												<p id="33e19981-6777-8094-923c-de7f098a2452" class="">Parte de
+													pagamentos contendo: data do vencimento, valor, descrição do
+													pagamento, data do pagamento, e status do pagamento.</p>
+											</div>
+											<div style="display:contents" dir="auto">
+												<p id="33e19981-6777-8058-aeba-fbbd9523d5ba" class="">Parte de
+													recebimentos: Data de recebimento, valor, descrição do recebimento.
+												</p>
+											</div>
+											<div style="display:contents" dir="auto">
+												<p id="33e19981-6777-8066-9017-e13406d8b6d7" class="">
+													<strong>Filtros:</strong> <strong>Input tipo Date</strong> (Início e
+													Fim) para filtragem de gastos.<strong>Tabela de Pagamentos:</strong>
+													Colunas com dados e <strong>Status Tag</strong> (visual colorido
+													para Pago/Pendente).<strong>Tabela de Recebimentos:</strong>
+													Listagem simples de entradas e valores.</p>
+											</div>
+											<div style="display:contents" dir="auto">
+												<p id="33e19981-6777-804f-83b3-fd1728045d87" class="">
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div style="display:contents" dir="auto">
+									<ul id="33e19981-6777-8054-b60e-cba1c9e21dff" class="bulleted-list">
+										<li style="list-style-type:circle">RH</li>
+									</ul>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-8084-b4b3-fada66aeb4dd" class=""><strong>Listagem:</strong>
+										<strong>Data Table</strong> com todos os funcionários ativos.
+										<strong>Edição:</strong> <strong>Modal (Janela flutuante)</strong> contendo
+										<strong>Inputs</strong> para ajuste de Salário e <strong>Form Select</strong>
+										para mudança de Cargo. <strong>Controle:</strong> <strong>Input tipo
+											Time</strong> ou numérico para ajuste de Horas Extras e Percentual.</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-805f-a63c-fae63d35f745" class="">
+									</p>
+								</div>
+								<div style="display:contents" dir="auto">
+									<p id="33e19981-6777-808b-b784-db81671ffebc" class="">Fluxo: Faça o cadastro,
+										redirecionar para o login, se for cliente após o login vai para a página do
+										cliente, caso seja funcionário é redirecionado para a página do funcionário, e
+										caso seja fornecedor vai para a página do fornecedor.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				</p>
+			</div>
+			<div style="display:contents" dir="auto">
+				<p id="33e19981-6777-804c-911c-c2b2e4ceb9c1" class="">
+				</p>
+			</div>
+		</div>
+	</article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+</body>
+
+</html>

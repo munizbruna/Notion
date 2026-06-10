@@ -1,0 +1,53 @@
+﻿Nome do projeto,Anexar arquivo,Data de início,Data de término,Equipe,Prioridade,Progresso,Responsável,Resumo por IA,Status,Valor final,Valor inicial
+Layout Padrão,,,,,,100%,,,Concluído,100,100
+Configurar a Connection String,,,,,,100%,,,Concluído,100,100
+Criar as classes dos modelos definidos,,,,,,100%,,,Concluído,100,100
+Configurar DbContext e Migrations,,03/24/2025,03/28/2025,Comercial,Média,100%,,"Planejamento trimestral de vendas para a equipe de gerenciamento de contas, programado de 24 a 28 de março de 2025, com prioridade média e meta de aumento de vendas de 0 para 100.",Concluído,100,100
+Renovar a integração de novos funcionários,,01/20/2025,02/04/2025,Recursos humanos,Baixa,100%,,"A renovação da integração de novos contratados está programada de 20 de janeiro de 2025 a 4 de fevereiro de 2025, com um status de baixa prioridade e uma meta de conclusão de 100.",Concluído,100,100
+Planejamento Design System,,,,,,100%,,"Definidos cores, layout, formato dos botões, iconografias e tipografia para a aplicação. Tarefas concluídas por Isabela, Yasmim, Brenno e Kaick, com um link para o design no Figma.",Concluído,100,100
+Definição de arquitetura geral da aplicação,,,,,,100%,,"A arquitetura da aplicação foi definida com um checklist que inclui as telas necessárias, os componentes, as ações e o fluxo entre as telas. O status do projeto é concluído.",Concluído,100,100
+Organização Geral do Notion,,,,,,100%,,"O projeto de Organização Geral do Notion está concluído, com um valor inicial e final de 100. Inclui uma visão geral das metas, itens de ação a serem realizados e documentos relacionados.",Concluído,100,100
+Planejamento Design System,,,,,,100%,,"O planejamento do Design System inclui a definição da paleta de cores, logo, formato dos botões, iconografias, interações e tipografia. A tarefa está concluída com todos os itens de ação marcados como completos, exceto um item em aberto. Um link para os documentos no Figma também está disponível.",Concluído,100,100
+Design - Documentar no Notion,,,,,,100%,,"O projeto de design foi concluído, incluindo a documentação da identidade visual com paleta de cores e tipografia no Notion, além de links para arquivos no Figma. Há também itens de ação a serem realizados.",Concluído,100,100
+Design - CSS Botões,,,,,,100%,,"O projeto visa criar um index.html e um style.css com botões e links, seguindo as cores e comportamentos prototipados no Figma. É necessário documentar as classes utilizadas, seja com biblioteca de estilo ou manualmente. As ações incluem a criação do modelo e a documentação das decisões no Notion.",Concluído,100,100
+Prototipo,,,,,,100%,,"O projeto está concluído e definiu os layouts das telas, focando na identidade visual da equipe. As ações incluem a finalização dos layouts e funções para Produtos, Clientes e Fornecedores, Funcionários, Pedidos, Financeiro, Estoque e Login. Um link para documentos adicionais no Figma também está disponível.",Concluído,100,100
+Setup Geral e Github,,,,,,100%,,,Concluído,100,100
+Produtos,,,,,,100%,brenno.motta,,Concluído,100,100
+Contas (a pagar/receber),,,,,,100%,brenno.motta,,Concluído,100,100
+Clientes/Fornecedores,,,,,,100%,Kaick Gonçalves Flauzino,,Concluído,100,100
+Folha de Pagamento,,,,,,100%,Kaick Gonçalves Flauzino,,Concluído,100,100
+Funcionários,,,,,,100%,Yasmim Meira Livon,,Concluído,100,100
+Pedidos/Vendas,,,,,,100%,Yasmim Meira Livon,,Concluído,100,100
+Item Pedido/Venda,,,,,,100%,brenno.motta,,Concluído,100,100
+Entrada e saída de estoque,,,,,,100%,Kaick Gonçalves Flauzino,,Concluído,100,100
+API Produtos,,,,,,100%,brenno.motta,,Concluído,100,100
+Layout Produtos,,,,,,100%,brenno.motta,,Concluído,100,100
+API Cliente/Fornecedor,,,,,,100%,Kaick Gonçalves Flauzino,,Concluído,100,100
+Layout Cliente/Fornecedor,,,,,,100%,Kaick Gonçalves Flauzino,,Concluído,100,100
+API Funcionários,,,,,,100%,,,Concluído,100,100
+Layout Funcionários,,,,,,100%,,,Concluído,100,100
+API Folha de Pagamento,,,,,,100%,Yasmim Meira Livon,,Concluído,100,100
+API Estoque/Movimentações,,,,,,100%,brenno.motta,,Concluído,100,100
+Layout Folha de Pagamento,,,,,,100%,Yasmim Meira Livon,,Concluído,100,100
+API Financeiro/Contas a pagar/receber,,,,,,100%,Kaick Gonçalves Flauzino,,Concluído,100,100
+API Pedidos,,,,,,100%,Isabela Machado Grejanin,,Concluído,100,100
+API Item do Pedido,,,,,,100%,Yasmim Meira Livon,,Concluído,100,100
+Teste com usuário real (1),,,06/10/2026 → 06/12/2026,,,0%,,,Não iniciado,,
+Publicação do Back (1),,,06/03/2026,,,0%,,,Não iniciado,,
+"Layouts Estoque, Financeiro, Pedido e Item Pedido",,,05/06/2026 → 05/08/2026,,,100%,,,Concluído,100,100
+Organização da Apresentação final (1),,,06/10/2026 → 06/12/2026,,,0%,,,Não iniciado,,
+Manual do usuário (1),,,05/27/2026 → 05/29/2026,,,0%,,,Não iniciado,,
+Autenticação (1),,,,,,50%,,,Em andamento,100,50
+Apresentação de Aprovação de Layout,,,05/06/2026 → 05/08/2026,,,100%,,,Concluído,100,100
+Publicação do Front (1),,,06/03/2026,,,0%,,,Não iniciado,,
+Documentação API e Front no Repositório (readme) (1),,,05/27/2026 → 05/29/2026,,,0%,,,Não iniciado,,
+Apresentação final (1),,,06/17/2026,,,0%,,,Não iniciado,,
+Azure (1),,,05/06/2026 → 05/08/2026,,,100%,,,Em andamento,100,100
+Roteiro de Teste,,,05/06/2026 → 05/08/2026,,,100%,,,Concluído,100,100
+Integração JS - Produtos,,,,,,100%,"brenno.motta, Kaick Gonçalves Flauzino",,Aguardando Aprovação,100,100
+Integração JS - Funcionário,,,,,,100%,"Yasmim Meira Livon, Isabela Machado Grejanin",,Aguardando Aprovação,100,100
+Integração JS - Folha de pagamento,,,,,,100%,"Yasmim Meira Livon, Isabela Machado Grejanin",,Aguardando Aprovação,100,100
+Integração JS - Estoque,,,,,,100%,"brenno.motta, Kaick Gonçalves Flauzino",,Aguardando Aprovação,100,100
+Integração JS - Financeiro,,,,,,100%,"Yasmim Meira Livon, Isabela Machado Grejanin",,Aguardando Aprovação,100,100
+Integração JS - Pedidos,,,,,,100%,,,Aguardando Aprovação,100,100
+Integração JS - Clientes/Fornecedores,,,,,,100%,"brenno.motta, Kaick Gonçalves Flauzino",,Aguardando Aprovação,100,100

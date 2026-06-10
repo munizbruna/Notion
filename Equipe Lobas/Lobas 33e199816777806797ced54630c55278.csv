@@ -1,0 +1,46 @@
+﻿Nome do projeto,Anexar arquivo,Data de início,Data de término,Equipe,Prioridade,Progresso,Responsável,Resumo por IA,Status,Valor final,Valor inicial
+Planejamento trimestral de vendas,,03/24/2025,03/28/2025,Comercial,Média,0%,,"Planejamento trimestral de vendas para a equipe de gerenciamento de contas, programado de 24 a 28 de março de 2025, com prioridade média e meta de aumento de vendas de 0 para 100.",Não iniciado,100,0
+Design - CSS Botões,,,,,,100%,Geovanna Bogovicz Pazini,"O projeto visa criar um index.html e um style.css com botões e links, seguindo o protótipo do Figma. É necessário documentar as classes de estilo utilizadas, seja de forma manual ou através de bibliotecas. As ações incluem a criação do modelo e a documentação das decisões no Notion.",Concluído,100,100
+Renovar a integração de novos funcionários,,01/20/2025,02/04/2025,Recursos humanos,Baixa,100%,,"A renovação da integração de novos contratados está programada de 20 de janeiro de 2025 a 4 de fevereiro de 2025, com um status de baixa prioridade e uma meta de conclusão de 100.",Concluído,100,100
+Definir paleta de cores,,04/09/2025,04/30/2025,Financeiro,Alta,100%,Lyvia da Mata Lima,"O projeto visa definir a paleta de cores e o layout geral da aplicação, sem criar telas no Figma. As ações incluem a definição das cores, formato e tipos de botões, e títulos. O status atual é ""Aguardando Aprovação"" e a prioridade é alta.",Concluído,100,100
+,,,,,,0%,,,Não iniciado,,
+Design - Documentar no Notion,,,,,Alta,0%,Lyvia da Mata Lima,"Documentar a identidade visual no Notion, incluindo paleta de cores e tipografia, além de adicionar o link do Figma.",Concluído,,
+Prototipo,,,,,,0%,Julia Diana de Paula,"O projeto em andamento, liderado por Julia Diana de Paula, foca na definição de telas e layouts, garantindo a identidade visual da equipe. As ações incluem o desenvolvimento de layouts para Produtos, Funcionários, Pedidos, Financeiro e Estoque, com alguns já concluídos, como Clientes e Fornecedores, e Login. Um link para o design no Figma também está disponível.",Concluído,,
+Definir Logo,,,04/10/2026,,,100%,Giovanna Ferreira Rossato,"A tarefa envolve definir as cores e o layout geral da aplicação, incluindo formato dos botões e títulos, sem criar telas no Figma. O status atual é ""Aguardando Aprovação"" e a data de término é 04/10/2026. O item de ação ""Definir logo"" já foi concluído.",Concluído,100,100
+Definir  formato dos botões,,,,,,100%,Geovanna Bogovicz Pazini,"Nesta etapa, serão definidas as cores e o layout geral da aplicação, focando no formato dos botões, tipos e títulos, sem montar telas no Figma. A tarefa inclui a definição do formato dos botões como item de ação.",Concluído,100,100
+Definir iconografias,,,,,,100%,Julia Diana de Paula,"O projeto visa definir as cores e o layout geral da aplicação, incluindo formato e tipos de botões, títulos, entre outros, sem criar telas no Figma. A tarefa inclui a definição de iconografias e está aguardando aprovação.",Concluído,100,100
+Definir interações com botões e iconografia,,,,,,100%,Julia Diana de Paula,"O projeto visa definir interações com botões e iconografia, com a responsável sendo Julia Diana de Paula. O status atual é de aguardando aprovação, e inclui uma lista de ações já iniciadas e um link para documentos relevantes no Figma.",Concluído,100,100
+Definir tipografia,,,,,,100%,,"O projeto visa definir a tipografia, com status de aprovação pendente. Inclui uma visão geral das metas, um item de ação já concluído e um link para documentos relevantes no Figma.",Concluído,100,100
+Produto,,,,,,0%,Julia Diana de Paula,,Concluído,,
+Contas,,,,,,0%,Julia Diana de Paula,,Concluído,,
+Clientes/Fornecedores,,,,,,0%,Giovanna Ferreira Rossato,,Concluído,,
+Funcionarios,,,,,,0%,Lyvia da Mata Lima,,Concluído,,
+Pedidos/Vendas,,,,,,0%,Giovanna Ferreira Rossato,,Concluído,,
+Item Pedido/Venda,,,,,,100%,Geovanna Bogovicz Pazini,,Concluído,100,100
+Entrada e saida de estoque,,,,,,0%,Lyvia da Mata Lima,,Concluído,,
+Folha de pagamento,,,,,,100%,Geovanna Bogovicz Pazini,,Concluído,90,90
+Layout Base,,,,,,100%,"Geovanna Bogovicz Pazini, Julia Diana de Paula",,Concluído,100,100
+Guia de Estilo Code,,,,,,0%,"Lyvia da Mata Lima, Giovanna Ferreira Rossato",,Concluído,,
+Api Produtos,,,,,,0%,Geovanna Bogovicz Pazini,,Aguardando Aprovação,,
+Layout Produtos,,,,,,0%,"Julia Diana de Paula, Geovanna Bogovicz Pazini",,Aguardando Aprovação,,
+API Cliente/Fornecedor,,,,,,0%,"Julia Diana de Paula, Geovanna Bogovicz Pazini",,Aguardando Aprovação,,
+Layout Cliente/Fornecedor,,,,,,0%,"Geovanna Bogovicz Pazini, Julia Diana de Paula",,Aguardando Aprovação,,
+API Funcionários,,,,,,0%,"Giovanna Ferreira Rossato, Lyvia da Mata Lima",,Concluído,,
+Layout Funcionários,,,,,,0%,"Giovanna Ferreira Rossato, Lyvia da Mata Lima",,Concluído,,
+API Folha de Pagamento,,,,,,0%,"Lyvia da Mata Lima, Giovanna Ferreira Rossato",,Concluído,,
+Layout Folha de Pagamento,,,,,,0%,"Giovanna Ferreira Rossato, Lyvia da Mata Lima",,Concluído,,
+API Funcionarios,,,,,,0%,"Lyvia da Mata Lima, Giovanna Ferreira Rossato",,Concluído,,
+API Estoque/Movimentações,,,,,,100%,Geovanna Bogovicz Pazini,,Aguardando Aprovação,100,100
+API Financeiro/Contas a pagar/receber,,,,,,0%,"Julia Diana de Paula, Geovanna Bogovicz Pazini",,Concluído,,
+API Pedidos,,,,,,0%,Geovanna Bogovicz Pazini,,Aguardando Aprovação,,
+API Item do Pedido,,,,,,0%,Lyvia da Mata Lima,,Aguardando Aprovação,,
+Roteiro de Teste,,,,,,0%,Lyvia da Mata Lima,,Concluído,,
+Documentação API e Front no Repositório (readme),,,,,,0%,Lyvia da Mata Lima,,Concluído,,
+Autenticação,,,,,,0%,Geovanna Bogovicz Pazini,,Concluído,,
+Integração JS - Produtos,,,,,,0%,"Giovanna Ferreira Rossato, Lyvia da Mata Lima",,Aguardando Aprovação,,
+Integração JS - Funcionário,,,,,,100%,"Julia Diana de Paula, Geovanna Bogovicz Pazini",,Aguardando Aprovação,100,100
+Integração JS - Folha de pagamento,,,,,,0%,,,Concluído,,
+Integração JS - Financeiro,,,,,,0%,,,Concluído,,
+Integração JS - Estoque,,,,,,0%,,,Concluído,,
+Integração JS - Pedidos,,,,,,0%,Lyvia da Mata Lima,,Concluído,,
+Integração JS - Clientes/Fornecedores,,,,,,0%,,,Concluído,,

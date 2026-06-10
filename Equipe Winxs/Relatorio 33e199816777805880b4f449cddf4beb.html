@@ -1,0 +1,743 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Relatorio</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="33e19981-6777-8058-80b4-f449cddf4beb" class="page sans"><header><img class="page-cover-image" src="Relatorio/image.png" style="object-position:center 41.349999999999994%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon notion-static-icon" src="https://app.notion.com/icons/folder_blue.svg"/></div><h1 class="page-title" dir="auto">Relatorio</h1><p class="page-description" dir="auto">Gerencie e execute os projetos do início ao fim.</p></header><div class="page-body"><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:31.818181818181817%"/><col style="width:22.727272727272727%"/><col style="width:22.727272727272727%"/><col style="width:22.72727272727272%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://app.notion.com/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Nome do projeto</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/friends_gray.svg" style="width:14px;height:14px;display:block"/></span>Responsável</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/activity_gray.svg" style="width:14px;height:14px;display:block"/></span>Progresso</th><th><span class="icon property-icon"><img src="https://app.notion.com/icons/arrow-circle-down_gray.svg" style="width:14px;height:14px;display:block"/></span>Prioridade</th></tr></thead><tbody><tr id="36d19981-6777-80ad-9bac-ed37d99c34d2"><td class="cell-title"><a href="Relatorio/Integra%C3%A7%C3%A3o%20JS%20-%20Clientes%20Fornecedores%2036d19981677780ad9baced37d99c34d2.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Integração JS - Clientes/Fornecedores</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">b</span></span>brenno.motta</span><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kaick Gonçalves Flauzino</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="36d19981-6777-8086-ad83-c2230aea3f67"><td class="cell-title"><a href="Relatorio/Integra%C3%A7%C3%A3o%20JS%20-%20Estoque%2036d1998167778086ad83c2230aea3f67.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Integração JS - Estoque</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">b</span></span>brenno.motta</span><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kaick Gonçalves Flauzino</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="36d19981-6777-8096-b6cd-c507032686a5"><td class="cell-title"><a href="Relatorio/Integra%C3%A7%C3%A3o%20JS%20-%20Financeiro%2036d1998167778096b6cdc507032686a5.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Integração JS - Financeiro</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">Y</span></span>Yasmim Meira Livon</span><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">I</span></span>Isabela Machado Grejanin</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="36d19981-6777-80cc-8d25-c7d53cbaa234"><td class="cell-title"><a href="Relatorio/Integra%C3%A7%C3%A3o%20JS%20-%20Folha%20de%20pagamento%2036d19981677780cc8d25c7d53cbaa234.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Integração JS - Folha de pagamento</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">Y</span></span>Yasmim Meira Livon</span><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">I</span></span>Isabela Machado Grejanin</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="36619981-6777-800e-ad25-c84629e9b87a"><td class="cell-title"><a href="Relatorio/Integra%C3%A7%C3%A3o%20JS%20-%20Funcion%C3%A1rio%20366199816777800ead25c84629e9b87a.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Integração JS - Funcionário</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">Y</span></span>Yasmim Meira Livon</span><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">I</span></span>Isabela Machado Grejanin</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="36619981-6777-80c7-8de3-dc27ceaf0eb2"><td class="cell-title"><a href="Relatorio/Integra%C3%A7%C3%A3o%20JS%20-%20Produtos%2036619981677780c78de3dc27ceaf0eb2.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Integração JS - Produtos</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">b</span></span>brenno.motta</span><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kaick Gonçalves Flauzino</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-806b-923f-ffdb66b35672"><td class="cell-title"><a href="Relatorio/Autentica%C3%A7%C3%A3o%20(1)%2035a199816777806b923fffdb66b35672.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Autenticação (1)</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">50%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-80ca-af67-dad2d5c5e40c"><td class="cell-title"><a href="Relatorio/Azure%20(1)%2035a19981677780caaf67dad2d5c5e40c.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Azure (1)</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-80e6-9fe6-f337e3dae1ed"><td class="cell-title"><a href="Relatorio/Apresenta%C3%A7%C3%A3o%20de%20Aprova%C3%A7%C3%A3o%20de%20Layout%2035a19981677780e69fe6f337e3dae1ed.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/delete_gray.svg"/>Apresentação de Aprovação de Layout</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-8061-bc2c-d6e688d16ab6"><td class="cell-title"><a href="Relatorio/Layouts%20Estoque,%20Financeiro,%20Pedido%20e%20Item%20Pedido%2035a1998167778061bc2cd6e688d16ab6.html"><span class="icon">🎨</span>Layouts Estoque, Financeiro, Pedido e Item Pedido</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-8028-906c-e00c49e67f3e"><td class="cell-title"><a href="Relatorio/Roteiro%20de%20Teste%2035a1998167778028906ce00c49e67f3e.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/clock-alternate_gray.svg"/>Roteiro de Teste</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="35119981-6777-80c1-9239-d49379d7d186"><td class="cell-title"><a href="Relatorio/API%20Financeiro%20Contas%20a%20pagar%20receber%2035119981677780c19239d49379d7d186.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>API Financeiro/Contas a pagar/receber</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kaick Gonçalves Flauzino</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34c19981-6777-8051-a584-f8ab048557e3"><td class="cell-title"><a href="Relatorio/API%20Estoque%20Movimenta%C3%A7%C3%B5es%2034c1998167778051a584f8ab048557e3.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>API Estoque/Movimentações</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">b</span></span>brenno.motta</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="35119981-6777-80f2-a1a2-e80bfe9b3122"><td class="cell-title"><a href="Relatorio/API%20Pedidos%2035119981677780f2a1a2e80bfe9b3122.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>API Pedidos</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">I</span></span>Isabela Machado Grejanin</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="35119981-6777-804c-8064-e7246df6de4c"><td class="cell-title"><a href="Relatorio/API%20Item%20do%20Pedido%20351199816777804c8064e7246df6de4c.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>API Item do Pedido</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">Y</span></span>Yasmim Meira Livon</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34c19981-6777-8093-8393-f6b2683e0f80"><td class="cell-title"><a href="Relatorio/API%20Produtos%2034c19981677780938393f6b2683e0f80.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>API Produtos</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">b</span></span>brenno.motta</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34c19981-6777-8029-8ca5-e709690c0149"><td class="cell-title"><a href="Relatorio/Layout%20Folha%20de%20Pagamento%2034c19981677780298ca5e709690c0149.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/color-palette_gray.svg"/>Layout Folha de Pagamento</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">Y</span></span>Yasmim Meira Livon</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34c19981-6777-8080-9cfa-ca4292b1a279"><td class="cell-title"><a href="Relatorio/Layout%20Cliente%20Fornecedor%2034c19981677780809cfaca4292b1a279.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/color-palette_gray.svg"/>Layout Cliente/Fornecedor</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kaick Gonçalves Flauzino</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34c19981-6777-809f-ad79-e36b4bc0c5fe"><td class="cell-title"><a href="Relatorio/Layout%20Funcion%C3%A1rios%2034c199816777809fad79e36b4bc0c5fe.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/color-palette_gray.svg"/>Layout Funcionários</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34c19981-6777-808c-9f83-f9baa687da61"><td class="cell-title"><a href="Relatorio/API%20Cliente%20Fornecedor%2034c199816777808c9f83f9baa687da61.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>API Cliente/Fornecedor</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kaick Gonçalves Flauzino</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34c19981-6777-80e1-aba2-d34b62715b01"><td class="cell-title"><a href="Relatorio/API%20Funcion%C3%A1rios%2034c19981677780e1aba2d34b62715b01.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>API Funcionários</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34c19981-6777-8013-8933-e886e19da8c0"><td class="cell-title"><a href="Relatorio/API%20Folha%20de%20Pagamento%2034c19981677780138933e886e19da8c0.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>API Folha de Pagamento</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">Y</span></span>Yasmim Meira Livon</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34c19981-6777-8030-a22d-fb2d490a3b1e"><td class="cell-title"><a href="Relatorio/Layout%20Produtos%2034c1998167778030a22dfb2d490a3b1e.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/color-palette_gray.svg"/>Layout Produtos</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">b</span></span>brenno.motta</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="33e19981-6777-8100-9db0-c1074991fd30"><td class="cell-title"><a href="Relatorio/Layout%20Padr%C3%A3o%2033e19981677781009db0c1074991fd30.html"><span class="icon">🎨</span>Layout Padrão</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34a19981-6777-8080-8139-cf6314bb4979"><td class="cell-title"><a href="Relatorio/Setup%20Geral%20e%20Github%2034a19981677780808139cf6314bb4979.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/branch-fork_gray.svg"/>Setup Geral e Github</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="33e19981-6777-8142-b993-cc96d172451e"><td class="cell-title"><a href="Relatorio/Configurar%20DbContext%20e%20Migrations%2033e1998167778142b993cc96d172451e.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/code_gray.svg"/>Configurar DbContext e Migrations</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"><span class="selected-value select-value-color-yellow">Média</span></td></tr><tr id="33e19981-6777-81fb-b913-cb897c22b80f"><td class="cell-title"><a href="Relatorio/Criar%20as%20classes%20dos%20modelos%20definidos%2033e19981677781fbb913cb897c22b80f.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/code_gray.svg"/>Criar as classes dos modelos definidos</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34a19981-6777-80d4-8812-f7a86fb04635"><td class="cell-title"><a href="Relatorio/Produtos%2034a19981677780d48812f7a86fb04635.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Produtos</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">b</span></span>brenno.motta</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34a19981-6777-805b-aadb-ee55a30d47e5"><td class="cell-title"><a href="Relatorio/Contas%20(a%20pagar%20receber)%2034a199816777805baadbee55a30d47e5.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Contas (a pagar/receber)</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">b</span></span>brenno.motta</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34a19981-6777-8094-a56d-f7d1eb445cb3"><td class="cell-title"><a href="Relatorio/Clientes%20Fornecedores%2034a1998167778094a56df7d1eb445cb3.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/user-circle_gray.svg"/>Clientes/Fornecedores</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kaick Gonçalves Flauzino</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34a19981-6777-80d2-82c4-e57dc1267154"><td class="cell-title"><a href="Relatorio/Folha%20de%20Pagamento%2034a19981677780d282c4e57dc1267154.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/cash_gray.svg"/>Folha de Pagamento</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kaick Gonçalves Flauzino</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34a19981-6777-8073-bd12-c4a88d60a74f"><td class="cell-title"><a href="Relatorio/Entrada%20e%20sa%C3%ADda%20de%20estoque%2034a1998167778073bd12c4a88d60a74f.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/shop_gray.svg"/>Entrada e saída de estoque</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kaick Gonçalves Flauzino</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34a19981-6777-8045-a0bf-e06c94e0bc84"><td class="cell-title"><a href="Relatorio/Item%20Pedido%20Venda%2034a1998167778045a0bfe06c94e0bc84.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/drafts_gray.svg"/>Item Pedido/Venda</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">b</span></span>brenno.motta</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="33e19981-6777-812c-bbdd-fd4603bf8565"><td class="cell-title"><a href="Relatorio/Configurar%20a%20Connection%20String%2033e199816777812cbbddfd4603bf8565.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/code_gray.svg"/>Configurar a Connection String</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34319981-6777-802c-bd6f-c1e9713b89eb"><td class="cell-title"><a href="Relatorio/Design%20-%20CSS%20Bot%C3%B5es%20343199816777802cbd6fc1e9713b89eb.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Design - CSS Botões</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34319981-6777-8040-81ef-c7906a647b20"><td class="cell-title"><a href="Relatorio/Prototipo%20343199816777804081efc7906a647b20.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Prototipo</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34319981-6777-80f0-96bb-faed311c0afe"><td class="cell-title"><a href="Relatorio/Design%20-%20Documentar%20no%20Notion%2034319981677780f096bbfaed311c0afe.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Design - Documentar no Notion</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34319981-6777-80a2-af61-f86373684a82"><td class="cell-title"><a href="Relatorio/Planejamento%20Design%20System%2034319981677780a2af61f86373684a82.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Planejamento Design System</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="33e19981-6777-8011-9a3f-e92f431762e9"><td class="cell-title"><a href="Relatorio/Planejamento%20Design%20System%2033e19981677780119a3fe92f431762e9.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Planejamento Design System</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="33e19981-6777-81ab-ac6d-f50d673abd13"><td class="cell-title"><a href="Relatorio/Renovar%20a%20integra%C3%A7%C3%A3o%20de%20novos%20funcion%C3%A1rios%2033e19981677781abac6df50d673abd13.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/groups_blue.svg"/>Renovar a integração de novos funcionários</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"><span class="selected-value select-value-color-green">Baixa</span></td></tr><tr id="34a19981-6777-8060-b2f1-d0f14da9623f"><td class="cell-title"><a href="Relatorio/Funcion%C3%A1rios%2034a1998167778060b2f1d0f14da9623f.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/groups_gray.svg"/>Funcionários</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">Y</span></span>Yasmim Meira Livon</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="34a19981-6777-80d2-afba-d86ea0bf89c8"><td class="cell-title"><a href="Relatorio/Pedidos%20Vendas%2034a19981677780d2afbad86ea0bf89c8.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/drafts_lightgray.svg"/>Pedidos/Vendas</a></td><td class="cell-K=N@"><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">Y</span></span>Yasmim Meira Livon</span></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="33e19981-6777-8070-a7cc-e763ff4f7631"><td class="cell-title"><a href="Relatorio/Defini%C3%A7%C3%A3o%20de%20arquitetura%20geral%20da%20aplica%C3%A7%C3%A3o%2033e1998167778070a7cce763ff4f7631.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Definição de arquitetura geral da aplicação</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="33e19981-6777-804f-b6ae-ebe753a01976"><td class="cell-title"><a href="Relatorio/Organiza%C3%A7%C3%A3o%20Geral%20do%20Notion%2033e199816777804fb6aeebe753a01976.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Organização Geral do Notion</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="36d19981-6777-80f7-b3b4-c60a9fea9d01"><td class="cell-title"><a href="Relatorio/Integra%C3%A7%C3%A3o%20JS%20-%20Pedidos%2036d19981677780f7b3b4c60a9fea9d01.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Integração JS - Pedidos</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">100%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-80d0-b696-e687d16c3143"><td class="cell-title"><a href="Relatorio/Apresenta%C3%A7%C3%A3o%20final%20(1)%2035a19981677780d0b696e687d16c3143.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Apresentação final (1)</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">0%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-805a-9730-c25c2690ca63"><td class="cell-title"><a href="Relatorio/Documenta%C3%A7%C3%A3o%20API%20e%20Front%20no%20Reposit%C3%B3rio%20(readme)%20(%2035a199816777805a9730c25c2690ca63.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Documentação API e Front no Repositório (readme) (1)</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">0%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-8011-a037-c973a495aac2"><td class="cell-title"><a href="Relatorio/Publica%C3%A7%C3%A3o%20do%20Front%20(1)%2035a1998167778011a037c973a495aac2.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Publicação do Front (1)</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">0%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-80cc-ae78-ebd19fbe7b26"><td class="cell-title"><a href="Relatorio/Manual%20do%20usu%C3%A1rio%20(1)%2035a19981677780ccae78ebd19fbe7b26.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Manual do usuário (1)</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">0%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-80b9-b438-e1c3351af8f4"><td class="cell-title"><a href="Relatorio/Organiza%C3%A7%C3%A3o%20da%20Apresenta%C3%A7%C3%A3o%20final%20(1)%2035a19981677780b9b438e1c3351af8f4.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Organização da Apresentação final (1)</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">0%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-8062-b9b0-f87f37d17c36"><td class="cell-title"><a href="Relatorio/Publica%C3%A7%C3%A3o%20do%20Back%20(1)%2035a1998167778062b9b0f87f37d17c36.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Publicação do Back (1)</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">0%</td><td class="cell-kccC"></td></tr><tr id="35a19981-6777-806d-ad36-d605a4493bc6"><td class="cell-title"><a href="Relatorio/Teste%20com%20usu%C3%A1rio%20real%20(1)%2035a199816777806dad36d605a4493bc6.html"><img class="icon notion-static-icon" src="https://app.notion.com/icons/iterate_blue.svg"/>Teste com usuário real (1)</a></td><td class="cell-K=N@"></td><td class="cell-q&gt;OQ">0%</td><td class="cell-kccC"></td></tr></tbody></table></div><br/><br/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
